@@ -1,0 +1,52 @@
+
+.loading-screen {
+  background-color: #8db4ad;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  position: fixed;
+  animation-name: loading-screen-timer;
+  animation-duration: 5s;
+  animation-delay: 4.3s;
+  transition-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+@keyframes loading-screen-timer {
+  50% {
+    background-color: rgb(20, 20, 20);
+  }
+  100% {
+    background-color: #212e43;
+  }
+}
+
+/* styling for title */
+.title {
+  color: #026c80;
+  font-family: 'Abril Fatface', serif;
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  position: relative;
+  top: 500px;
+  padding: 5%;
+  animation-name: title-timer;
+  animation-duration: 3.5s;
+  animation-delay: 4.3s;
+  opacity: 0;
+}
+
+.title span {
+  color: white;
+}
+
+@keyframes title-timer {
+  50%{
+    opacity: 100%;
+  }
+}

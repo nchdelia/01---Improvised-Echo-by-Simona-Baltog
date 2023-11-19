@@ -1,0 +1,643 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;500;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+main{
+    overflow: hidden;
+    background: linear-gradient(20deg, #21414b, #66827d, #21414b, #21414b);
+}
+
+body {
+  margin: 0;
+  margin-top: 90px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+
+#content {
+    background-color: #21414b;
+    height: 100vh;
+    width: 100%;
+    animation: display-content;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes display-content {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* navbar style settings */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 140px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 600ms;
+    padding: 30px 100px;
+    z-index: 100;
+    letter-spacing: 1.2px;
+    border-bottom: 1px solid #fff;
+    background-color: #232E44;
+    background-image: url('./img/house on hill/White\ dots.png');
+    background-size: contain;
+}
+
+.logo {
+    cursor: pointer;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    transition: 1s;
+}
+
+/* sticky navbar settings */
+
+header.sticky {
+    height: 100px;
+    padding: 5px 100px;
+    background-color: #fff;
+}
+
+header.sticky nav ul li a {
+    color:#21414b;
+}
+
+.logo.stickyLogo {
+    cursor: pointer;
+    height: 100px;
+    position: absolute;
+    top: 0;
+}
+
+.dropdown-settings.stickyDropdown {
+    position: absolute;
+    margin-top: -20px;
+}
+
+/* links navbar settings */
+header ul {
+    position: relative;
+}
+
+.nav-links li {
+    position: relative;
+    list-style: none;
+    float: left;
+}
+
+.nav-links li a {
+    color: #fff;
+    font-size: 1.1em;
+    margin: 0 70px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+}
+
+.nav-links li .courses b {
+    padding: 0 10px;
+    font-size: 1.5em;
+    position: absolute;
+    right: 2rem;
+    bottom: calc(50% - 15px);
+}
+
+.underlined-title {
+    padding: 55px 0;
+    transition: 200ms;
+}
+
+a.underlined-title:after {
+    content: "";
+    position: absolute;
+    background-color: #ff9774;
+    height: 2.5px;
+    width: 0;
+    bottom: 45px;
+    transition: 0.3s;
+}
+
+a.underlined-title:hover {
+    color: #ff9774;
+}
+
+a.underlined-title:hover:after {
+    width: 80%;
+}
+
+/* links navbar settings for dropdown */
+.dropdown-settings {
+    position: absolute;
+    left: 25px;
+    margin-top: 0;
+    width: 450px;
+    background: #ff9774;
+    display: none;
+    animation: display-content 200ms ease-in;
+    transition: 600ms;
+}
+
+.nav-links li:hover .dropdown-settings {
+    display: block;
+}
+
+.dropdown-settings {
+    padding: 0;
+}
+
+.dropdown-settings:hover {
+    cursor: pointer;
+}
+
+.dropdown-settings li {
+    position: relative;
+    width: 100%;
+    padding: 20px 0px;
+    border-bottom: 1px solid #12242a;
+   
+}
+
+.dropdown-settings li:hover {
+    background-color: #fbc8b7;
+}
+
+.dropdown-settings li a {
+    color: #12242a;
+}
+
+.nav-links .pink-title {
+    color:#ff9774;
+}
+
+/* responsive navbar settings */
+@media (max-width: 900px) {
+    header {
+        padding: 10px 20px;
+    }
+    header nav {
+        position: absolute;
+        width: 100%;
+        top: 140px;
+        left: 0;
+        background: #21414b;
+    }
+    .nav-links li {
+        width: 100%;
+    }
+    .dropdown-settings {
+        position: relative;
+        width: 100%;
+    }
+}
+
+/* scroll mouse icon styling */
+.scroll-down {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    position: absolute;
+    top: 93%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    animation: showMouse 2s forwards 1s;
+}
+
+@keyframes showMouse {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.fade-away {
+    opacity: 1;
+    animation: fade-away 1s forwards;
+}
+
+@keyframes fade-away {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+.scroll-down p {
+    color: #ff7e6e;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 7px 15px;
+}
+
+.wheel {
+    width: 30px;
+    height: 60px;
+    border: 2px solid white;
+    border-radius: 30px;
+    position: relative;
+    margin-bottom: 20px;
+    background-color: #ff7e6e;
+}
+
+.wheel::before {
+    content: "";
+    width: 5px;
+    height: 10px;
+    position: absolute;
+    top: 50px;
+    background-color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3px;
+    opacity: 1;
+    animation: wheel 1.8s infinite;
+}
+
+
+@keyframes wheel {
+    from{
+        opacity: 1;
+        top: 10px;
+    }
+    to{
+        opacity: 0;
+        top: 40px;
+    }
+}
+
+
+/* first page styles for slideshow */
+.slideshow {
+    width: 2600px;
+    max-width: 100vw;
+    height: 100vh;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+}
+
+.list {
+    position: absolute;
+    padding-top: 50px;
+    top: 0;
+    left: 0;
+    height: 75%;
+    display: flex;
+    width: max-content;
+    transition: 1s;
+}
+
+.list img {
+    width: 2600px;
+    max-width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.buttons {
+    position: relative;
+    top: 40%;
+    left: 5%;
+    width: 90%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(185, 185, 185, 0.3);
+    color: rgb(255, 255, 255);
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    font-weight: bold;
+}
+
+.dots {
+    position: absolute;
+    bottom: 28%;
+    color: white;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+}
+
+.dots li {
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 20px;
+    transition: 1s;
+}
+
+.dots li.active {
+    width: 30px;
+}
+
+.dots li:hover {
+    background-color: #ed6335;
+    cursor: pointer;
+}
+
+/* @media screen and (max-width: 768px) {
+    .slideshow {
+        height: 400px;
+    }
+} */
+
+
+/* next pages - appear on scroll settings */
+.hidden-element {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1.3s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.hidden-element:nth-child(1) {
+    transition-delay: 200ms;
+}
+
+.hidden-element:nth-child(2) {
+    transition-delay: 400ms;
+}
+
+.hidden-element:nth-child(3) {
+    transition-delay: 600ms;
+}
+
+
+@media(prefers-reduced-motion) {
+    .hidden-element {
+        transition: none;
+    }
+}
+
+/* next pages - section styling - general */
+.next-pages section {
+    color: white;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    height: 100vh;
+    z-index: 10;
+}
+
+.section-content {
+    width: 80%;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    gap: 5rem;
+    grid-template-columns: 3fr 4fr;
+}
+
+.section1 {
+    background-color: #232E44;
+    background-image: url('./img/house on hill/White\ notes.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.section2 {
+    background-image: url('./img/house on hill/House\ on\ hill.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.section2 p {
+    color: #21414b;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 100px;
+    z-index: 10;
+}
+
+.section3 {
+    background-image: url('./img/house on hill/White\ dots.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.section3 p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 100px;
+    line-height: 3rem;
+    width: 800px;
+    text-align: justify;
+    margin: auto;
+}
+
+.section8 p {
+    width: 800px;
+    text-align: justify;
+    margin: auto; 
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 60px;
+    line-height: 2rem;
+}
+
+/* next pages - section styling - description part */
+.description-part {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.description-part button {
+    transform: translateX(50%);
+}
+
+.description-part h2 {
+    font-size: 2rem;
+}
+
+.description-part p {
+    font-size: 1rem;
+    line-height: 2rem;
+    text-align: justify;
+    letter-spacing: 0.5px;
+    padding-right: 50px;
+}
+
+.description-part button {
+    font-family: 'Quicksand', sans-serif;
+    margin: 3rem;
+    width: 150px;
+    height: 50px;
+    color: white;
+    background-image: url('./img/background-button.jpg');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+
+.description-part button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.description-part button:active {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid #ed6335;
+    color: #ed6335;
+}
+
+/* next pages - section styling - image part */
+section:nth-child(3) {
+    height: 50vh;
+}
+.piano-image {
+    width: 100%;
+    opacity: 0.9;
+}
+
+.image-part {
+    width: 300px;
+    display: flex;
+    position: relative;
+}
+
+.image-part img {
+    position: absolute;
+    left: -100%;
+    transform: translateY(-50%);
+    width: 45rem;
+    height: auto;
+    transition: all 1s;
+    padding-left: 70px;
+}
+
+.section5-background {
+    opacity: 0.2;
+}
+
+.section7-background {
+    opacity: 0.2;
+}
+
+
+.section5,
+.section6,
+.section7,
+.section8 {
+    background-image: url('./img/house on hill/White\ dots.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.section5 .section-content,
+.section6 .section-content,
+.section7 .section-content {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 50px;
+    height: 80vh;
+}
+
+.vertical-line {
+    width: 1px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: relative;
+    bottom: 10%;
+}
+
+/* footer styiling */
+footer {
+    height: 150px;
+    background-color: #12242a;
+    color: white;
+    text-align: center;
+}
+
+.footer-container {
+    margin: 0;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+footer .icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+}
+
+footer .socialmedia-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 20px;
+    border-radius: 50%;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8rem;
+    padding-bottom: 10px;
+}
+

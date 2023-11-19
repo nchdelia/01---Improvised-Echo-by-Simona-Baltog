@@ -1,0 +1,154 @@
+
+/* general container settings */
+.animation-container {
+    height: 700px;
+    width: 700px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 10rem;
+    bottom: 0;
+  }
+
+/* music sheet style settings */
+.music-sheet {
+    background-image: url('./img/musicSheet.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    top: 40%;
+    display: flex;
+    margin: auto;
+    animation-name: sheet-timer;
+    animation-duration: 0.5s;
+    animation-delay: 3.2s;
+    transition-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes sheet-timer {
+    100%{
+      opacity: 0;
+    }
+  }
+  
+  /* music notes animation */
+  
+  .note-1 {
+    background-image: url('./img/music-note-1.png');
+    width: 120px;
+    height: 120px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 440px;
+    animation-name: moving-note-1;
+    animation-duration: 1.5s;
+    animation-delay: 0.2s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+  
+  .note-2 {
+    background-image: url('./img/music-note-2.png');
+    width: 135px;
+    height: 135px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 255px;
+    bottom: 45px;
+    animation-name: moving-note-2;
+    animation-duration: 1.5s;
+    animation-delay: 1.1s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+  
+  .note-3 {
+    background-image: url('./img/music-note-3.png');
+    width: 120px;
+    height: 120px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 205px;
+    top: 31px;
+    animation-name: moving-note-3;
+    animation-duration: 1.5s;
+    animation-delay: 2s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+  
+  @keyframes moving-note-1 {
+    20%{
+      opacity: 1;
+      background-image: url('./img/music-note-1.png');
+      transform: translateX(-225px) translateY(0);
+    }
+    35%{
+      background-image: url('./img/music-note-1-coloured.png');
+    }
+    50%{
+      transform: translateX(-225px) translateY(29px);
+    }
+    80%{
+      opacity: 1;
+      background-image: url('./img/music-note-1.png');
+    }
+    100%{
+      transform: translateX(-450px);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes moving-note-2 {
+    20%{
+      opacity: 1;
+      background-image: url('./img/music-note-2.png');
+      transform: translateX(-193px) translateY(0);
+    }
+    35%{
+      background-image: url('./img/music-note-2-coloured.png');
+    }
+    50%{
+      transform: translateX(-193px) translateY(29px);
+    }
+    80%{
+      opacity: 1;
+      background-image: url('./img/music-note-2.png');
+    }
+    100%{
+      transform: translateX(-386px);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes moving-note-3 {
+    20%{
+      opacity: 1;
+      background-image: url('./img/music-note-3.png');
+      transform: translateX(-225px) translateY(0);
+    }
+    35%{
+      background-image: url('./img/music-note-3-coloured.png');
+    }
+    50%{
+      transform: translateX(-225px) translateY(29px);
+    }
+    80%{
+      opacity: 1;
+      background-image: url('./img/music-note-3.png');
+    }
+    100%{
+      transform: translateX(-450px);
+      opacity: 0;
+    }
+  }

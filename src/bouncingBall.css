@@ -1,0 +1,81 @@
+/* scene and bouncing ball settings */
+.theater-settings {
+    height: 700px;
+    width: 700px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 10rem;
+    bottom: 0;
+}
+
+.ball {
+    background-color: #b00938;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    border-radius: 50%;
+    position: relative;
+    top: 160px;
+    animation: ball-bounce 0.86s 4 forwards, fade 7s 1 forwards;
+  }
+  
+  @keyframes ball-bounce {
+    10%{
+      width: 50px;
+      height: 50px; 
+    }
+    30%{
+      width: 50px;
+      height: 40px; 
+    } 
+    50%{
+      width: 57px;
+      height: 30px;
+      transform: translateY(-180px);
+    }
+    75%{
+      width: 57px;
+      height: 50px;
+    }
+    100%{
+      width: 57px;
+      height: 50px;
+      transform: translateY(0);
+    }
+  }
+
+@keyframes fade {
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.spotlights-image {
+    background-image: url('./img/spotlights.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    margin:auto;
+    left: 0;
+    right: 10px;
+    top: 0;
+    bottom: 450px;
+    animation-name: spotlight-timer;
+    animation-duration: 3.5s;
+    animation-delay: 4s;
+    opacity: 0;
+  }
+  
+  @keyframes spotlight-timer {
+    50%{
+      opacity: 1;
+    }
+  }
+  
