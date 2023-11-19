@@ -1,0 +1,70 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+main{
+    background-color: #21414b;
+    background-image: url('./img/house on hill/White\ dots.png');
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+body {
+  margin: 0;
+  margin-top: 90px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.title {
+    display: flex;
+}
+
+.horizontal-line {
+    width: 150px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+h1 {
+    color: #fff;
+    padding-top: 140px;
+    text-align: center;
+    margin: auto;
+}
+
+.description {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-photo img {
+    width: 800px;
+    z-index: 10;
+}
+
+.description p {
+    color: #fff;
+    font-size: 1rem;
+    text-align: justify;
+    line-height: 40px;
+    width: 800px;
+}
+
+.line-container {
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+.vertical-line {
+    width: 1px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: auto;
+
+}

@@ -1,0 +1,18 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+main{
+    margin-top: 140px;
+    overflow: hidden;
+    background-color: #66827d;
+    height: 100vh;
+}
+
+body {
+  margin: 0;
+  margin-top: 90px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}

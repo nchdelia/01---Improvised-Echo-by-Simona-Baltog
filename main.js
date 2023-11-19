@@ -12,18 +12,10 @@ window.addEventListener("load", function() {
     this.window.setTimeout(hideLoader, 7000);
 })
 
-//sticky navbar on scroll
+//mouse image on scroll
 window.addEventListener("scroll", function() {
-    let dropdown = document.querySelector(".dropdown-settings");
-    let header = this.document.querySelector("header");
-    let logo = this.document.querySelector(".logo");
-    header.classList.toggle("sticky", window.scrollY > 0);
-    logo.classList.toggle("stickyLogo", window.scrollY > 0);
-    dropdown.classList.toggle("stickyDropdown", window.scrollY > 0);
-
     let scrollIcon = document.getElementsByClassName("scroll-down")[0];
     scrollIcon.classList.add("fade-away");
-
 });
 
 //first page slideshow
