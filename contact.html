@@ -6,30 +6,107 @@
     <link rel="stylesheet" href="./src/navbar.css">
     <link rel="stylesheet" href="./src/contact.css">
     <link rel="stylesheet" href="./src/footer.css">
-    <script src="./main.js" defer></script>
+    <link rel="stylesheet" href="./src/pageTransition.css">
+    <script src="./pageTransition.js" defer></script>
     <title>Improvised Echo | Contact</title>
 </head>
 <body>
+  <div class="transition transition-3 is-active"></div>
+
   <header>
-    <a href="index.html"><img class="logo" src="./src/img/logo/Logo - Improvised Echo - light.png" alt="logo"></a>
+    <a href="home.html" class="anchorTransition"><img class="logo" src="./src/img/logo/Logo - Improvised Echo - light.png" alt="logo"></a>
     <div class="menuToggle"></div>
     <nav>
       <ul class="nav-links">
-        <li><a href="index.html" title="Home" class="underlined-title">Home</a></li>
+        <li><a href="home.html" title="Home" class="underlined-title anchorTransition homepage">Home</a></li>
         <li><a href="#" title="Courses" class="underlined-title courses">Courses <b>&#9660;</b></a>
           <ul class="dropdown-settings">
-            <li><a href="musicdrama.html">Music and drama classes</a></li>
-            <li><a href="singingclasses.html">Vocal singing classes</a></li>
-            <li><a href="pianoclasses.html">Piano classes</a></li>
+            <li><a href="musicdrama.html" class="anchorTransition">Music and drama classes</a></li>
+            <li><a href="singingclasses.html" class="anchorTransition">Vocal singing classes</a></li>
+            <li><a href="pianoclasses.html" class="anchorTransition">Piano classes</a></li>
           </ul>
         </li>
-        <li><a href="about.html" title="About" class="underlined-title">About</a></li>
+        <li><a href="about.html" title="About" class="underlined-title anchorTransition">About</a></li>
         <li><a href="#" title="Contact" class="underlined-title">Contact</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    <h1>Contact</h1>
+    <div class="contactMe">
+      <div class="title">
+        <h1>Get in Touch</h1>
+      </div>
+      <div class="box">
+        <!-- Form -->
+        <div class="contact form">
+          <h3>Send a Message</h3>
+          <form>
+            <div class="formBox">
+
+              <div class="row50">
+                <div class="inputBox">
+                  <span>First Name</span>
+                  <input type="text">
+                </div>
+                <div class="inputBox">
+                  <span>Last Name</span>
+                  <input type="text">
+                </div>
+              </div>
+
+              <div class="row50">
+                <div class="inputBox">
+                  <span>Email</span>
+                  <input type="text">
+                </div>
+                <div class="inputBox">
+                  <span>Phone</span>
+                  <input type="text">
+                </div>
+              </div>
+              
+              <div class="row100">
+                <div class="inputBox">
+                  <span>Message</span>
+                  <textarea></textarea>
+                </div>
+              </div>
+
+              <div class="row100">
+                <div class="inputBox">
+                  <input type="submit" value="Send">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- info Box -->
+        <div class="contact info">
+          <h3>Contact Info</h3>
+          <div class="infoBox">
+            <div>
+              <span><ion-icon name="location-outline"></ion-icon></span>
+              <p>Soukankuja 12F, <br> Espoo, Finland</p>
+            </div>
+            <div>
+              <span><ion-icon name="call-outline"></ion-icon></span>
+              <p>+358 40 2507193</p>
+            </div>
+            <div>
+              <span><ion-icon name="mail-outline"></ion-icon></span>
+              <a href="mailto:improvisedechobysimonabaltog@gmail.com">improvisedechobysimonabaltog@gmail.com</a>
+            </div>
+          </div>
+
+        </div>
+        <!-- Map -->
+        <div class="contact map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37038.71166696792!2d24.67123834357916!3d60.13833656312222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468d8b3500ed662f%3A0xeed3733eb4cd04d8!2sSoukankuja%2010%2C%2002360%20Espoo%2C%20Finlanda!5e0!3m2!1sro!2sro!4v1700676838246!5m2!1sro!2sro" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+    
+
   </main>
   <footer>
     <div class="footer-container">
@@ -47,5 +124,8 @@
       <p>&copy; 2023 Improvised Echo by Simona Baltog</p>
     </div>
   </footer>
+  
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

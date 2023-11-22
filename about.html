@@ -6,25 +6,29 @@
     <link rel="stylesheet" href="./src/navbar.css">
     <link rel="stylesheet" href="./src/footer.css">
     <link rel="stylesheet" href="./src/about.css">
+    <link rel="stylesheet" href="./src/pageTransition.css">
     <script src="./navbar.js" defer></script>
+    <script src="./pageTransition.js" defer></script>
     <title>Improvised Echo | About</title>
 </head>
 <body>
+  <div class="transition transition-2 is-active"></div>
+
   <header>
-    <a href="index.html"><img class="logo" src="./src/img/logo/Logo - Improvised Echo - light.png" alt="logo"></a>
+    <a href="index.html" class="anchorTransition"><img class="logo" src="./src/img/logo/Logo - Improvised Echo - light.png" alt="logo"></a>
     <div class="menuToggle"></div>
     <nav>
       <ul class="nav-links">
-        <li><a href="index.html" title="Home" class="underlined-title">Home</a></li>
+        <li><a href="index.html" title="Home" class="underlined-title anchorTransition homepage">Home</a></li>
         <li><a href="#" title="Courses" class="underlined-title courses">Courses <b>&#9660;</b></a>
           <ul class="dropdown-settings">
-            <li><a href="musicdrama.html">Music and drama classes</a></li>
-            <li><a href="singingclasses.html">Vocal singing classes</a></li>
-            <li><a href="pianoclasses.html">Piano classes</a></li>
+            <li><a href="musicdrama.html" class="anchorTransition">Music and drama classes</a></li>
+            <li><a href="singingclasses.html" class="anchorTransition">Vocal singing classes</a></li>
+            <li><a href="pianoclasses.html" class="anchorTransition">Piano classes</a></li>
           </ul>
         </li>
         <li><a href="#" title="About" class="underlined-title">About</a></li>
-        <li><a href="contact.html" title="Contact" class="underlined-title">Contact</a></li>
+        <li><a href="contact.html" title="Contact" class="underlined-title anchorTransition">Contact</a></li>
       </ul>
     </nav>
   </header>
