@@ -4,17 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/navbar.css">
-    <link rel="stylesheet" href="./src/contact.css">
     <link rel="stylesheet" href="./src/footer.css">
     <link rel="stylesheet" href="./src/pageTransition.css">
+    <link rel="stylesheet" href="./src/contact.css">
     <script src="./pageTransition.js" defer></script>
+    <script src="./navbar.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
+    <script src="contact.js" defer></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init("vKh5uDrgBpGZcBftQ");
+      })();
+    </script>
     <title>Improvised Echo | Contact</title>
 </head>
 <body>
   <div class="transition transition-3 is-active"></div>
 
   <header>
-    <a href="home.html" class="anchorTransition"><img class="logo" src="./src/img/logo/Logo - Improvised Echo - light.png" alt="logo"></a>
+    <a href="home.html" class="anchorTransition"><img class="logo" src="./src/img/logo/Logo - Improvised Echo - light.png" alt="logo"/></a>
     <div class="menuToggle"></div>
     <nav>
       <ul class="nav-links">
@@ -45,36 +57,36 @@
 
               <div class="row50">
                 <div class="inputBox">
-                  <span>First Name</span>
-                  <input type="text">
+                  <label for="firstName">First Name</label>
+                  <input type="text" id="firstName" required autocomplete="given-name">
                 </div>
                 <div class="inputBox">
-                  <span>Last Name</span>
-                  <input type="text">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" id="lastName" required autocomplete="family-name">
                 </div>
               </div>
 
               <div class="row50">
                 <div class="inputBox">
-                  <span>Email</span>
-                  <input type="text">
+                  <label for="email">Email</label>
+                  <input type="text" id="email" required autocomplete="email">
                 </div>
                 <div class="inputBox">
-                  <span>Phone</span>
-                  <input type="text">
+                  <label for="phone">Phone</label>
+                  <input type="text" id="phone" autocomplete="tel">
                 </div>
               </div>
               
               <div class="row100">
                 <div class="inputBox">
-                  <span>Message</span>
-                  <textarea></textarea>
+                  <label for="message">Message</label>
+                  <textarea id="message" required></textarea>
                 </div>
               </div>
 
               <div class="row100">
                 <div class="inputBox">
-                  <input type="submit" value="Send">
+                  <button type="submit" onclick="sendMail()">Send</button>
                 </div>
               </div>
             </div>
@@ -96,8 +108,13 @@
               <span><ion-icon name="mail-outline"></ion-icon></span>
               <a href="mailto:improvisedechobysimonabaltog@gmail.com">improvisedechobysimonabaltog@gmail.com</a>
             </div>
+            <!-- social media links -->
+            <ul class="social">
+              <li><a href="https://www.facebook.com/profile.php?id=61552258806701" title="Facebook account" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
+              <li><a href="https://www.instagram.com/improvisedechobysimonabaltog/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA=="title="Instagram account" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
+              <li><a href="https://www.tiktok.com/@improvisedechobysimonab" title="Tiktok account" target="_blank"><ion-icon name="logo-tiktok"></ion-icon></a></li>
+            </ul>
           </div>
-
         </div>
         <!-- Map -->
         <div class="contact map">
@@ -105,27 +122,24 @@
         </div>
       </div>
     </div>
-    
-
   </main>
   <footer>
     <div class="footer-container">
       <div class="icons">
         <a href="https://www.facebook.com/profile.php?id=61552258806701" title="Facebook account" target="_blank">
-          <img src="./src/img/facebook-icon.png" class="socialmedia-icon">
+          <img src="./src/img/facebook-icon.png" class="socialmedia-icon"/>
         </a>
         <a href="https://www.instagram.com/improvisedechobysimonabaltog/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==" title="Instagram account" target="_blank">
-          <img src="./src/img/instagram-icon.png" class="socialmedia-icon">
+          <img src="./src/img/instagram-icon.png" class="socialmedia-icon"/>
         </a>
         <a href="https://www.tiktok.com/@improvisedechobysimonab" title="Tiktok account" target="_blank">
-          <img src="./src/img/tik-tok-icon.png" class="socialmedia-icon">
+          <img src="./src/img/tik-tok-icon.png" class="socialmedia-icon"/>
         </a>
       </div>
       <p>&copy; 2023 Improvised Echo by Simona Baltog</p>
     </div>
   </footer>
   
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </body>
 </html>

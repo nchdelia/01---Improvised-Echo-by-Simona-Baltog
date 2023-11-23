@@ -5,30 +5,35 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-main{
-    background-color: #21414b;
+body {
+    background-color: #66827d;
     background-image: url('./img/house on hill/White\ dots.png');
     background-size: contain;
     background-repeat: repeat;
     background-position: center;
 }
 
+main {
+    margin-top: 140px;
+}
+
 .title {
     display: flex;
 }
 
-.horizontal-line {
+/* .horizontal-line {
     width: 150px;
     height: 1px;
     background-color: rgba(255, 255, 255, 0.5);
-}
+    margin: auto;
+    margin-top: 5%;
+} */
 
 h1 {
     color: #fff;
-    padding-top: 140px;
     text-align: center;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 5%;
 }
 
 .description {
