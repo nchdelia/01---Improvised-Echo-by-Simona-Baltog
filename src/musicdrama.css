@@ -51,6 +51,7 @@ section {
     background-image: url('./img/house on hill/White dots.png');
     background-size: cover;
     background-repeat: no-repeat;
+    width: 100%;
 }
 
 .section1 .box {
@@ -247,6 +248,7 @@ section {
     background-image: url('./img/house on hill/White\ dots.png');
     background-size: cover;
     background-repeat: no-repeat;
+    width: 100%;
 }
 
 .section2-container {
