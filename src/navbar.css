@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
 /* navbar style settings */
 header {
     display: flex;
@@ -14,7 +16,8 @@ header {
     z-index: 100;
     letter-spacing: 1.2px;
     border-bottom: 1px solid #fff;
-    /* background-color: rgba(255, 255, 255, 0.2); */
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(255, 255, 255, 0.3);
     /* background-image: url('./img/house on hill/White\ dots.png');
     background-size: contain; */
 }
@@ -36,7 +39,7 @@ header.sticky {
 }
 
 header.sticky nav ul li a {
-    color:#21414b;
+    color:#28433b;
 }
 
 .logo.stickyLogo {
@@ -75,7 +78,7 @@ header ul {
 
 .nav-links li .courses b {
     padding: 0 10px;
-    font-size: 1.5em;
+    font-size: 1em;
     position: absolute;
     right: 2rem;
     bottom: calc(50% - 15px);
