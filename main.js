@@ -88,25 +88,6 @@ hiddenElements.forEach((element) => {
 });
 
 
-//dropdown settings for navbar (Courses tab)
-let dropList = document.querySelector(".dropdown-settings");
-let title = document.querySelector(".courses");
-let dropdownArrow = document.querySelector("b");
-
-dropList.addEventListener("mouseover", function() {
-    title.classList.add("pink-title");
-    dropdownArrow.innerHTML = "&#9650;";
-})
-dropList.addEventListener("mouseleave", function() {
-    title.classList.remove("pink-title");
-    dropdownArrow.innerHTML = "&#9660;";
-})
-title.addEventListener("mouseover", function() {
-    dropdownArrow.innerHTML = "&#9650;";
-})
-title.addEventListener("mouseleave", function() {
-    dropdownArrow.innerHTML = "&#9660;";
-})
 
 
 

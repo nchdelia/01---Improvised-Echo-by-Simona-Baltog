@@ -8,21 +8,609 @@
 }
 
 body {
-    background-color: #66827d;
-    background-image: url('./img/house on hill/White\ dots.png');
-    background-size: cover;
-    background-repeat: repeat;
-    background-position: center;
+    background-color: #66827a;
 }
 
 main {
     margin-top: 140px;
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.title {
+    background-image: url('./img/house on hill/White dots.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
 }
 
 h1 {
     color: #fff;
     text-align: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* section 1 styling */
+.categories {
+    grid-area: categories;
+  }
+
+.info {
+    grid-area: info;
+}
+
+.section1 {
+    background-image: url('./img/house on hill/White dots.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.section1 .box {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "categories"
+    "info";
+    margin: 0 100px;
+    margin-bottom: 100px;
+    max-width: 1500px;
+}
+
+.categories {
+    z-index: 10;
+  }
+
+.subcat {
+    padding: 15px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    z-index: 10;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    text-align: center;   
+}
+
+.subcat h3 {
+    color: #28433b;
+    font-size: 1rem;
+    line-height: 2rem;
+    text-wrap: nowrap;
+}
+
+.course {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.description {
+    width: 60%;
+    margin: 50px;
+    padding: 50px 20px;
+    text-align: justify;
+    color: #28433b;
+    line-height: 2rem;
+}
+
+.description h4,
+.keypoints h4 {
+    color: #28433b;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.description p {
+    margin-top: 20px;
+}
+
+.keypoints {
+    width: 40%;
+    margin: 50px;
+    padding: 50px 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    line-height: 1.8rem;
+    border-radius: 10px;
+    min-width: 400px;
+    max-width: 500px;
+}
+
+.keypoints h4 {
+    padding-left: 70px;
+}
+
+.keypoints ol {
+    margin-top: 20px;
+    padding-left: 50px;
+    color: #28433b;
+}
+
+.keypoints ol li::before {
+    content: "";
+    width: 20px;
+    display: inline-block;
+}
+
+.cat-1 {
+    background-color: rgb(211, 154, 62);
+}
+
+.cat-1:hover {
+    background-color: rgb(211, 154, 62);
+}
+
+.info-course1 {
+    background-color: rgb(230, 168, 69);
+    border: 10px solid rgb(211, 154, 62);
+}
+
+/* next pages - appear on scroll settings */
+.hidden-element {
+    opacity: 0;
+    transition: all 1.3s;
+}
+
+.show {
+    opacity: 1;
+}
+
+@media(prefers-reduced-motion) {
+    .hidden-element {
+        transition: none;
+    }
+}
+
+/* section 2 styling */
+.section2 {
+    background-image: url('./img/piano/Piano\ image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+}
+
+.section2-container {
+    color: #fff;
+    max-width: 1500px;
+    padding-top: 3%;
     margin: auto;
-    margin-top: 10%;
+}
+
+.section2-title1 {
+    margin-bottom: 50px;
+    text-align: center;
+    color: rgb(237, 173, 71);
+}
+
+.section2-title2 {
+    margin-top: 25px;
+    text-align: center;
+    color: rgb(237, 173, 71);
+}
+
+.section2 p {
+    width: 800px;
+    padding: 10px 0;
+    line-height: 2rem;
+    text-align: justify;
+}
+
+.section2 ul {
+    padding-left: 10px;
+    line-height: 2rem;
+    text-align: justify;
+    display: flex;
+}
+
+.section2 ul li {
+    list-style:none;
+    font-style: italic;
+}
+
+.section2 ul li::before {
+    content: "";
+    margin-right: 28px;
+    display: inline-block;
+}
+
+.section2 span {
+    font-weight: bold;
+    color:rgb(237, 173, 71);
+}
+
+/* section 3 styling */
+.section3 {
+    width: 100%;
+    background-color: #305047;
+    color: #fff;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.section3 h2 {
+    margin: 50px;
+    color: rgb(237, 173, 71);
+}
+
+.section3 p,
+.section3 ol {
+    width: 800px;
+    line-height: 2rem;
+    text-align: justify;
+}
+
+.section3 div {
+    margin: 15px 0;
+}
+
+.section3 div p {
+    margin: 15px 0;
+}
+
+.section3 ol li {
+    margin-bottom: 25px;
+}
+
+.section3 ol li h3 {
+    color: rgb(237, 173, 71);
+}
+
+.section3 ::marker {
+    color: rgb(237, 173, 71);
+    font-weight: bold;
+    font-size: 1.1rem;
+    
+}
+
+/* section 4 - prices styling */
+.section4 {
+    background-color: rgb(211, 154, 62);
+    width: 100%;
+}
+
+.section4 h2 {
+    margin: 70px;
+    color: #28433b;
+}
+
+.pricesContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 140px;
+}
+
+.section4 .priceBox {
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    transition: 0.5s ease;
+    border: 2px solid #305047;
+    border-radius: 5px;
+    width: 250px;
+    height: 365px;
+}
+
+.priceBox:hover {
+    transform: translateX(10px) translateY(-10px);
+    box-shadow: -10px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.section4 .priceTitle {
+    padding: 15px 35px;
+    background-color: #305047;
+    height: 80px;
+}
+
+.priceBox h4 {
+    color: #fff;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.section4 .priceDetails {
+    color: #305047;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    height: 281px;
+}
+
+.priceDetails .part1 {
+    font-size: 1rem;
+    line-height: 1.8rem;
+    padding: 20px;
+}
+
+.priceDetails .part1 .boldText {
+    font-weight: bold;
+}
+
+.custom-select {
+    position: relative;
+    margin-top: 5px;
+}
+
+.part1 #duration {
+    width: 190px;
+    padding: 7px 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #305047;
+    outline: none;
+    transition: 2s ease;
+    font-size: 1rem;
+}
+
+.custom-arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    background: #305047;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    height: 100%;
+    width: 2em;
+    pointer-events: none;
+}
+
+.custom-arrow::before,
+.custom-arrow::after {
+    --size: 0.45em;
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 40%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.custom-arrow::before {
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-top: var(--size) solid #fff;
+}
+
+.part1 #duration option {
+    cursor: pointer;
+}
+
+.priceDetails .part2 {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 2.2rem;
+}
+
+.euro-sign {
+    font-size: 1.3rem;
+    margin-top: .25rem;
+    margin-right: .2rem;
+}
+
+.price-decimals {
+    font-size: 1rem;
+    margin-top: .4rem;
+    margin-left: .2rem;
+}
+
+.static-time {
+    margin-top: 15px;
+}
+
+.section4 .priceDetails .part3 {
+    font-size: 0.8rem;
+    color: #585858;
+    padding-top: 10px;
+}
+
+.section4 .priceDetails .part4 {
+    font-size: 0.8rem;
+    color: #585858;
+    padding: 20px;
+}
+
+/* section 4 appear on scroll styling */
+.hidden-prices {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    animation: all 3s;
+}
+
+.show-prices {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.hidden-trial-prices {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: all 2s;
+}
+
+.show-trial-prices {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+@media(prefers-reduced-motion) {
+    .hidden-prices {
+        transition: none;
+    }
+    .hidden-trial-prices {
+        transition: none;
+    }
+}
+
+.note {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 1090px;
+    margin-bottom: 30px;
+}
+
+.note .line {
+    width: 300px;
+    height: 1px;
+    background-color: #28433b;
+    position: relative;
+    top: 25%;
+    transform: translateY(-25%);
+}
+.note p {
+    color: #28433b;
+    padding-bottom: 60px;
+    font-style: italic;
+    margin: auto;
+    position: relative;
+    top: 50%;
+}
+
+/* section 5 styling */
+.section5 {
+    background-color: rgb(211, 154, 62);
+    width: 100%;
+}
+
+.section5 h2 {
+    color: #305047;
+}
+
+.trialContainer {
+    display: flex;
+    flex-direction: row;
+    width: 1030px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.trialText {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #28433b;
+    line-height: 2rem;
+    width: 250px;
+}
+
+.trialText p span {
+    color: #fff;
+}
+
+.trialText p {
+    padding: 20px 0;
+}
+
+.section5 .priceBox {
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    transition: 0.5s ease;
+    border: 2px solid rgb(177, 93, 66);
+    border-radius: 5px;
+    width: 250px;
+    height: 365px;
+}
+
+.section5 .priceTitle {
+    padding: 15px 35px;
+    background-color: rgb(177, 93, 66);
+    height: 80px;
+}
+
+.section5 .priceDetails {
+    color: rgb(177, 93, 66);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    height: 281px;
+}
+
+.part1 #duration-trial {
+    width: 190px;
+    padding: 7px 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #fff;
+    background-color: rgb(177, 93, 66);
+    outline: none;
+    transition: 2s ease;
+    font-size: 1rem;
+}
+
+.custom-arrow-trial {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    background: rgb(177, 93, 66);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    height: 100%;
+    width: 2em;
+    pointer-events: none;
+}
+
+.section5 .priceDetails .part3 {
+    font-size: 0.8rem;
+    color: rgb(177, 93, 66);
+    padding-top: 10px;
+}
+
+.section5 .priceDetails .part4 {
+    font-size: 0.8rem;
+    color: rgb(177, 93, 66);
+    padding: 20px;
+}
+
+.custom-arrow-trial::before,
+.custom-arrow-trial::after {
+    --size: 0.45em;
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 40%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.custom-arrow-trial::before {
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-top: var(--size) solid #fff;
+}
+
+.part1 #duration-trial option {
+    cursor: pointer;
 }
