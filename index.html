@@ -37,23 +37,32 @@
       <div class="transition transition-2 is-active"></div>
 
       <header>
-        <a href="#"><img class="logo" src="./src/img/logo/Logo - Improvised Echo - green and mustard.png" alt="logo"></a>
+        <a href="#"><img class="logo" src="./src/img/logo/ImprovisedEcho_logo_negative_formatPNG.png" alt="logo"></a>
         <div class="menuToggle"></div>
         <nav>
           <ul class="nav-links">
-            <li><a href="home.html" title="Home" class="underlined-title homepage">Home</a></li>
-            <li><a href="#course1" title="Courses" class="underlined-title courses">Courses <b>&#9660;</b></a>
+            <li class="link"><a href="#" title="Home" class="underlined-title homepage">Home</a></li>
+            <li class="link"><a href="#" title="Courses" class="underlined-title courses">Courses <b>&#9660;</b></a>
               <ul class="dropdown-settings">
                 <li><a href="musicdrama.html" class="anchorTransition">Music and drama classes</a></li>
-                <li><a href="singingclasses.html" class="anchorTransition">Vocal singing classes</a></li>
+                <li><a href="singingclasses.html" class="anchorTransition">Singing classes</a></li>
                 <li><a href="pianoclasses.html" class="anchorTransition">Piano classes</a></li>
+                <li><a href="companiesclasses.html" class="anchorTransition">Companies - Team Day</a></li>
               </ul>
             </li>
-            <li><a href="about.html" title="About" class="underlined-title anchorTransition">About</a></li>
-            <li><a href="contact.html" title="Contact" class="underlined-title anchorTransition">Contact</a></li>
+            <li class="link"><a href="prices.html" title="Prices" class="underlined-title anchorTransition prices">Prices</a></li>
+            <li class="link"><a href="gallery.html" title="Gallery" class="underlined-title anchorTransition gallery">Gallery</a></li>
+            <li class="link"><a href="about.html" title="About" class="underlined-title anchorTransition about">About</a></li>
+            <li class="link"><a href="contact.html" title="Contact" class="underlined-title anchorTransition contactPage">Contact</a></li>
           </ul>
+          <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
         </nav>
       </header>
+
       <main>
         <div class="scroll-down">
           <p>Scroll down to explore</p>
@@ -63,33 +72,19 @@
           </div>
         </div>
         <div class="first-page">
-          <section aria-label="Courses Slideshow Preview" class="section1">
-            <div class="slideshow" data-slideshow>
-              <!-- image slides -->
-              <div class="list">
-                <div class="slide">
-                  <img src="./src/img/slide1.jpg" alt="Image Course 1">
-                </div>
-                <div class="slide">
-                  <img src="./src/img/slide2.jpg" alt="Image Course 2">
-                </div>
-                <div class="slide">
-                  <img src="./src/img/slide3.jpg" alt="Image Course 3">
-                </div>
-              </div>
-              <!-- previous and next buttons -->
-              <div class="buttons">
-                <button id="prev"><</button>
-                <button id="next">></button>
-              </div>
-              <!-- dots buttons -->
-              <ul class="dots">
-                <li class="active"></li>
-                <li></li>
-                <li></li>
-              </ul>
+          <div class="homepagePresentation">
+            <div class="homepageLeftSide">
+              <img src="./src/img/Improvised_face_ylapalkki.png" alt="pictures"/>
             </div>
-          </section>
+            <div class="homepageRightSide">
+              <div class="homepageParagraphs">
+                <p>SINGING AND PIANO LESSONS</p>
+                <p>&#8226;</p>
+                <p>DRAMA AND IMPRO CLASSES</p>
+              </div>
+              <img src="./src/img/logo/ImprovisedEcho_logo_positive_firstPage.png" alt="logo"/>
+            </div>
+          </div>
         </div>
         <div class="next-pages">
           <section class="section2">
@@ -97,8 +92,8 @@
           </section>
           <section class="section3">
             <p class="hidden-element">Here is a place where your dreams come true.</p>
-            <p class="hidden-element">Either you seek professional guidance or only want to discover yourself better through music, drama, vocal singing, or piano.</p>
-            <p class="hidden-element">Here, you will find support guidance.</p>
+            <p class="hidden-element">This is the place for you, whether you seek professional guidance or only want to discover yourself better through music or drama.</p>
+            <p class="hidden-element">Here, you will find support and guidance.</p>
           </section>
           <section class="section4">
             <img src="./src/img/pianoTabs.png" alt="piano image" class="piano-image">
@@ -130,12 +125,12 @@
           <section class="section6">
             <div class="section-content hidden-element">
               <div class="description-part">
-                <h2>Vocal singing classes</h2>
+                <h2>Singing classes</h2>
                 <p>
-                  Vocal classes focus on training and developing the singing voice, offering a wide range of benefits to individuals of all ages and skill levels.
+                  Singing classes focus on training and developing the singing voice, offering a wide range of benefits to individuals of all ages and skill levels.
                 </p>
                 <p>
-                  Whether you're pursuing singing as a hobby or a potential career, vocal classes can provide a structured and supportive environment for improving your singing abilities and enjoying the many personal, social, and artistic benefits that singing has to offer.
+                  Whether you're pursuing singing as a hobby or a potential career, singing classes can provide a structured and supportive environment for improving your singing abilities and enjoying the many personal, social, and artistic benefits that singing has to offer.
                 </p>
                 <button>View More</button>
               </div>
@@ -151,7 +146,7 @@
               <div class="description-part">
                 <h2>Piano classes for beginners</h2>
                 <p>
-                  Piano classes for beginners, designed to be friendly with a cozy and relaxed atmosphere.
+                  Piano classes for beginners are designed to be friendly with a cozy and relaxed atmosphere.
                 </p>
                 <p>
                   Teaching the piano in a supportive manner can foster a positive and productive learning environment, making the experience enjoyable and effective for students.
@@ -169,7 +164,7 @@
             </div>
           </section>
           <section class="section8">
-            <p class="hidden-element">Improvised Echo by Simona Baltog will become your safe place where feelings will be better understood, integrated, and accepted.</p>
+            <p class="hidden-element">Improvised Echo will become your safe place where feelings will be better understood, integrated, and accepted.</p>
             <p class="hidden-element">Here is where music, drama, vocal singing, or piano will bring tools to help you in your journey.</p>
             <div class="vertical-line"></div>
           </section>
@@ -181,10 +176,10 @@
             <a href="https://www.facebook.com/profile.php?id=61552258806701" title="Facebook account" target="_blank">
               <img src="./src/img/facebook-icon.png" class="socialmedia-icon">
             </a>
-            <a href="https://www.instagram.com/improvisedechobysimonabaltog/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==" title="Instagram account" target="_blank">
+            <a href="https://www.instagram.com/improvisedecho/" title="Instagram account" target="_blank">
               <img src="./src/img/instagram-icon.png" class="socialmedia-icon">
             </a>
-            <a href="https://www.tiktok.com/@improvisedechobysimonab" title="Tiktok account" target="_blank">
+            <a href="https://www.tiktok.com/@improvisedecho?is_from_webapp=1&sender_device=pc" title="Tiktok account" target="_blank">
               <img src="./src/img/tik-tok-icon.png" class="socialmedia-icon">
             </a>
           </div>

@@ -18,59 +18,6 @@ window.addEventListener("scroll", function() {
     scrollIcon.classList.add("fade-away");
 });
 
-//first page slideshow
-let list = document.querySelector('.slideshow .list');
-let slides = document.querySelectorAll('.slideshow .list .slide');
-let dots = document.querySelectorAll('.slideshow .dots li');
-let prev = document.getElementById('prev');
-let next = document.getElementById('next');
-
-let active = 0;
-let lengthSlide = slides.length;
-
-let refreshSlideshow = setInterval(() => {
-    next.click();
-}, 4000);
-
-function reloadSlider() {
-    let checkLeft = slides[active].offsetLeft;
-    list.style.left = -checkLeft + 'px';
-
-    let lastActiveDot = document.querySelector('.slideshow .dots li.active');
-    lastActiveDot.classList.remove('active');
-    dots[active].classList.add('active');
-    clearInterval(refreshSlideshow);
-    refreshSlideshow = setInterval(() => {
-        next.click();
-    }, 4000);
-}
-
-next.onclick = function() {
-    if(active + 1 > lengthSlide - 1) {
-        active = 0;
-    } else {
-        active++;
-    }
-    reloadSlider();
-}
-
-prev.onclick = function() {
-    if(active - 1 < 0) {
-        active = lengthSlide - 1;
-    } else {
-        active--;
-    }
-    reloadSlider();
-}
-
-dots.forEach((li, key) => {
-    li.addEventListener("click", function() {
-        active = key;
-        reloadSlider();
-    })
-})
-
-
 // animation on scroll settings
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {

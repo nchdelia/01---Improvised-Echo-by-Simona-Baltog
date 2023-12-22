@@ -5,7 +5,7 @@
     right: 0;
     bottom: 0;
     z-index: 101;
-    background-color: #305047;
+    background-color: #112327;
     opacity: 0;
     pointer-events: none;
     transition: 0.4s ease-out;
@@ -23,8 +23,8 @@
     width: 100%;
     bottom: 0;
     z-index: 101;
-    background-color: #1f2c29;
-    background-image: url('./img/logo/Logo - Improvised Echo - green and mustard.png');
+    background-color: #112327;
+    background-image: url('./img/logo/ImprovisedEcho_logo_negative_formatPNG.png');
     background-repeat: no-repeat;
     background-size: 20%;
     background-position: center;
@@ -42,8 +42,8 @@
     right: 0;
     height: 100%;
     z-index: 101;
-    background-color: #1f2c29;
-    background-image: url('./img/logo/Logo - Improvised Echo - green and mustard.png');
+    background-color: #112327;
+    background-image: url('./img/logo/ImprovisedEcho_logo_negative_formatPNG.png');
     background-repeat: no-repeat;
     background-size: 20%;
     background-position: center;

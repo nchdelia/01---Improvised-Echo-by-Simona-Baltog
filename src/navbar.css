@@ -6,33 +6,40 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 140px;
+    height: 100px;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     transition: 600ms;
-    padding: 30px 100px;
+    padding: 30px 50px;
     z-index: 100;
-    letter-spacing: 1.2px;
+    letter-spacing: 0.5px;
     border-bottom: 1px solid #fff;
     font-family: 'Poppins', sans-serif;
-    background-color: #94a8a2;
+    background-color: #66827d;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .logo {
     cursor: pointer;
-    height: 150px;
+    height: 80%;
     position: absolute;
-    top: 0;
-    transition: 1s;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 2s;
 }
 
 /* sticky navbar settings */
 
 header.sticky {
-    height: 100px;
-    padding: 5px 100px;
+    height: 70px;
+    padding: 0 50px;
     background-color: #fff;
 }
 
@@ -40,16 +47,9 @@ header.sticky nav ul li a {
     color:#28433b;
 }
 
-.logo.stickyLogo {
-    cursor: pointer;
-    height: 100px;
-    position: absolute;
-    top: 0;
-}
-
 .dropdown-settings.stickyDropdown {
     position: absolute;
-    margin-top: -20px;
+    margin-top: -39px;
 }
 
 /* links navbar settings */
@@ -65,21 +65,18 @@ header ul {
 
 .nav-links li a {
     color: #fff;
-    font-size: 1.1em;
-    margin: 0 70px;
+    font-size: 1em;
+    margin: 0 30px;
     text-decoration: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .nav-links li .courses b {
-    padding: 0 10px;
-    font-size: 1em;
-    position: absolute;
-    right: 2rem;
-    bottom: calc(50% - 15px);
+    padding-left: 5px;
+    font-size: 0.8em;
 }
 
 .underlined-title {
@@ -87,42 +84,64 @@ header ul {
     transition: 200ms;
 }
 
-a.underlined-title:after {
-    content: "";
-    position: absolute;
-    background-color: #ff9774;
-    height: 2.5px;
-    width: 0;
-    bottom: 45px;
-    transition: 0.3s;
+@media screen and (min-width: 769px) {
+    a.underlined-title:hover {
+        color: #ff9774;
+    }
+
+    a.underlined-title:after {
+        content: "";
+        position: absolute;
+        background-color: #ff9774;
+        height: 2px;
+        width: 0;
+        bottom: 50px;
+        transition: 0.3s;
+    }
+    
+    a.homepage:hover:after {
+        width: 45%;
+    }
+    
+    a.courses:hover:after {
+        width: 58%;
+    }
+    
+    a.prices:hover:after {
+        width: 45%;
+    }
+    
+    a.gallery:hover:after {
+        width: 50%;
+    }
+    
+    a.about:hover:after {
+        width: 45%;
+    }
+    
+    a.contactPage:hover:after {
+        width: 53%;
+    }
 }
 
-a.underlined-title:hover {
-    color: #ff9774;
-}
-
-a.underlined-title:hover:after {
-    width: 80%;
-}
 
 /* links navbar settings for dropdown */
 .dropdown-settings {
+    padding: 0;
     position: absolute;
     left: 25px;
-    margin-top: 0;
-    width: 450px;
+    margin-top: -25px;
+    width: 350px;
     background: #ff9774;
     display: none;
     animation: display-content 200ms ease-in;
     transition: 600ms;
 }
 
-.nav-links li:hover .dropdown-settings {
-    display: block;
-}
-
-.dropdown-settings {
-    padding: 0;
+@media screen and (min-width: 901px) {
+    .nav-links li:hover .dropdown-settings {
+        display: block;
+    }
 }
 
 .dropdown-settings:hover {
@@ -134,7 +153,6 @@ a.underlined-title:hover:after {
     width: 100%;
     padding: 20px 0px;
     border-bottom: 1px solid #28433b;
-   
 }
 
 .dropdown-settings li:hover {
@@ -150,22 +168,144 @@ a.underlined-title:hover:after {
 }
 
 /* responsive navbar settings */
-@media (max-width: 900px) {
-    header {
-        padding: 10px 20px;
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width:900px) {
+    body {
+        overflow-x: hidden;
     }
-    header nav {
+
+    .logo {
+        height: 55%;
+    }
+
+    .nav-links {
         position: absolute;
-        width: 100%;
-        top: 140px;
-        left: 0;
-        background: #28433b;
+        right: 0px;
+        height: 92vh;
+        top: 80px;
+        background-color: #66827d;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        transition: 600ms;
     }
-    .nav-links li {
-        width: 100%;
+
+    .link {
+        opacity: 0;
     }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
     .dropdown-settings {
+        display: none;
+    }
+
+    .dropdown-active {
+        display: block;
         position: relative;
-        width: 100%;
+        width: 50vw;
+    }
+
+    .dropdown-active li {
+        background-color: #ff9774;
+        margin-left: -40px;
+    }
+
+    header.sticky {
+        background-color: #66827d;
+    }
+    
+    header.sticky nav ul li a {
+        color:#fff;
+    }
+
+    header.sticky .dropdown-settings li a {
+        color: #28433b;
+    }
+    
+    .stickyNavLinks {
+        top: 50px;
+    }
+
+    header.sticky .dropdown-active {
+        display: block;
+        position: relative;
+        width: 50vw;
+        
+    }
+
+    header.sticky .dropdown-active li {
+        color: #28433b;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-3px, 7px); 
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-3px, -7px);
+}
+
+a.underlined-title:active {
+    color: #ff9774;
+}
+
+@media screen and (min-width: 901px) and (max-width:950px) {
+    .logo {
+        height: 55%;
+    }
+
+    .nav-links li a {
+        margin: 0 20px;
+
+    }
+}
+
+@media only screen and (min-width: 951px) and (max-width: 1080px) {
+    .logo {
+        height: 70%;
+
+    }
+
+    .nav-links li a {
+        margin: 0 25px;
+
     }
 }
