@@ -17,7 +17,7 @@ header {
     letter-spacing: 0.5px;
     border-bottom: 1px solid #fff;
     font-family: 'Poppins', sans-serif;
-    background-color: #66827d;
+    background-color: #66827a;
 }
 
 nav {
@@ -49,7 +49,7 @@ header.sticky nav ul li a {
 
 .dropdown-settings.stickyDropdown {
     position: absolute;
-    margin-top: -39px;
+    margin-top: -31px;
 }
 
 /* links navbar settings */
@@ -124,13 +124,12 @@ header ul {
     }
 }
 
-
 /* links navbar settings for dropdown */
 .dropdown-settings {
     padding: 0;
     position: absolute;
     left: 25px;
-    margin-top: -25px;
+    margin-top: -18px;
     width: 350px;
     background: #ff9774;
     display: none;
@@ -194,7 +193,7 @@ header ul {
         right: 0px;
         height: 92vh;
         top: 80px;
-        background-color: #66827d;
+        background-color: #66827a;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -229,7 +228,7 @@ header ul {
     }
 
     header.sticky {
-        background-color: #66827d;
+        background-color: #66827a;
     }
     
     header.sticky nav ul li a {

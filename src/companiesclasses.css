@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #66827a;
+}
+
+main {
+    margin-top: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.title {
+    background-image: url('./img/house on hill/White dots.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* section 1 styling */
+.categories {
+    grid-area: categories;
+  }
+
+.info {
+    grid-area: info;
+}
+
+.section1 {
+    background-image: url('./img/house on hill/White dots.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.section1 .box {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "categories"
+    "info";
+    margin: 0 100px;
+    margin-bottom: 100px;
+    max-width: 1500px;
+}
+
+.categories {
+    z-index: 10;
+  }
+
+.subcat {
+    padding: 15px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    z-index: 10;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    text-align: center;   
+}
+
+.subcat h3 {
+    color: #28433b;
+    font-size: 1rem;
+    line-height: 2rem;
+    text-wrap: nowrap;
+}
+
+.course {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.description {
+    width: 60%;
+    margin: 50px;
+    padding: 50px 20px;
+    text-align: justify;
+    color: #28433b;
+    line-height: 2rem;
+}
+
+.description h4,
+.keypoints h4 {
+    color: #28433b;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.description p {
+    margin-top: 20px;
+}
+
+.keypoints {
+    width: 40%;
+    margin: 50px;
+    padding: 50px 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    line-height: 1.8rem;
+    border-radius: 10px;
+    min-width: 400px;
+    max-width: 500px;
+}
+
+.keypoints h4 {
+    padding-left: 70px;
+}
+
+.keypoints ol {
+    margin-top: 20px;
+    padding-left: 50px;
+    color: #28433b;
+}
+
+.keypoints ol li::before {
+    content: "";
+    width: 20px;
+    display: inline-block;
+}
+
+.cat-1 {
+    background-color: rgb(125, 191, 193);
+}
+
+.info-course1 {
+    background-color: rgb(171, 229, 230);
+    border: 10px solid rgb(125, 191, 193);
+}

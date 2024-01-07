@@ -60,41 +60,43 @@
         <!-- Form -->
         <div class="contact form">
           <h3>Send a Message</h3>
-          <form>
+          <form action="https://formsubmit.co/nechita.delia9@email.com" method="POST">
             <div class="formBox">
 
               <div class="row50">
                 <div class="inputBox">
                   <label for="firstName">First Name</label>
-                  <input type="text" id="firstName" required autocomplete="given-name">
+                  <input type="text" id="firstName" required autocomplete="given-name" name="firstName">
                 </div>
                 <div class="inputBox">
                   <label for="lastName">Last Name</label>
-                  <input type="text" id="lastName" required autocomplete="family-name">
+                  <input type="text" id="lastName" required autocomplete="family-name" name="lastName">
                 </div>
               </div>
 
               <div class="row50">
                 <div class="inputBox">
                   <label for="email">Email</label>
-                  <input type="text" id="email" required autocomplete="email">
+                  <input type="text" id="email" required autocomplete="email" name="email">
                 </div>
                 <div class="inputBox">
                   <label for="phone">Phone</label>
-                  <input type="text" id="phone" autocomplete="tel">
+                  <input type="text" id="phone" autocomplete="tel" name="phone">
                 </div>
               </div>
               
               <div class="row100">
                 <div class="inputBox">
                   <label for="message">Message</label>
-                  <textarea id="message" required></textarea>
+                  <textarea id="message" required name="message"></textarea>
                 </div>
               </div>
 
               <div class="row100">
                 <div class="inputBox">
-                  <button type="submit" onclick="sendMail()">Send</button>
+                  <button type="submit">Send</button>
+                  <input type="hidden" name="_subject" value="You got a new email from a user!">
+                  <!-- <input type="hidden" name="_next" value="https://improvisedecho.fi/thanks.html"> -->
                 </div>
               </div>
             </div>
@@ -114,13 +116,13 @@
             </div>
             <div>
               <span><ion-icon name="mail-outline"></ion-icon></span>
-              <a href="mailto:improvisedechobysimonabaltog@gmail.com">improvisedechobysimonabaltog@gmail.com</a>
+              <a href="mailto:improvisedecho@gmail.com">improvisedecho@gmail.com</a>
             </div>
             <!-- social media links -->
             <ul class="social">
               <li><a href="https://www.facebook.com/profile.php?id=61552258806701" title="Facebook account" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
-              <li><a href="https://www.instagram.com/improvisedechobysimonabaltog/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA=="title="Instagram account" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
-              <li><a href="https://www.tiktok.com/@improvisedechobysimonab" title="Tiktok account" target="_blank"><ion-icon name="logo-tiktok"></ion-icon></a></li>
+              <li><a href="https://www.instagram.com/improvisedecho/" title="Instagram account" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
+              <li><a href="https://www.tiktok.com/@improvisedecho?is_from_webapp=1&sender_device=pc" title="Tiktok account" target="_blank"><ion-icon name="logo-tiktok"></ion-icon></a></li>
             </ul>
           </div>
         </div>

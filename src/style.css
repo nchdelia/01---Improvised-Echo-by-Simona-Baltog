@@ -268,7 +268,7 @@ body {
     margin: auto;
 }
 
-.section8 p {
+.section9 p {
     width: 800px;
     text-align: justify;
     margin: auto; 
@@ -328,6 +328,11 @@ body {
     color: #ed6335;
 }
 
+.description-part button a {
+    text-decoration: none;
+    color: #fff;
+}
+
 /* next pages - section styling - image part */
 section:nth-child(3) {
     height: 50vh;
@@ -364,7 +369,8 @@ section:nth-child(3) {
 .section5,
 .section6,
 .section7,
-.section8 {
+.section8,
+.section9 {
     background-image: url('./img/house on hill/White\ dots.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -372,7 +378,8 @@ section:nth-child(3) {
 
 .section5 .section-content,
 .section6 .section-content,
-.section7 .section-content {
+.section7 .section-content,
+.section8 .section-content {
     border: 1px solid rgba(255, 255, 255, 0.5);
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
@@ -443,7 +450,7 @@ section:nth-child(3) {
         line-height: 2.5rem;
     }
     
-    .section8 p {
+    .section9 p {
         font-size: 1.2rem;
         width: 100%;
         padding: 60px;
@@ -502,7 +509,7 @@ section:nth-child(3) {
         line-height: 2.5rem;
     }
     
-    .section8 p {
+    .section9 p {
         font-size: 1.2rem;
         width: 100%;
         padding: 60px;
