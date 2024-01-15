@@ -9,17 +9,7 @@
     <link rel="stylesheet" href="./src/contact.css">
     <script src="./pageTransition.js" defer></script>
     <script src="./navbar.js" defer></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
-    <script src="contact.js" defer></script>
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-      (function(){
-          emailjs.init("vKh5uDrgBpGZcBftQ");
-      })();
-    </script>
+    <!-- <script src="contact.js" defer></script> -->
     <title>Improvised Echo | Contact</title>
 </head>
 <body>
@@ -60,43 +50,45 @@
         <!-- Form -->
         <div class="contact form">
           <h3>Send a Message</h3>
-          <form action="https://formsubmit.co/nechita.delia9@email.com" method="POST">
+          <form 
+            target="_blank" 
+            action="https://formsubmit.co/nechita.delia9@gmail.com" 
+            method="POST"
+          >
             <div class="formBox">
 
               <div class="row50">
                 <div class="inputBox">
                   <label for="firstName">First Name</label>
-                  <input type="text" id="firstName" required autocomplete="given-name" name="firstName">
+                  <input type="text" id="firstName" autocomplete="given-name" name="firstName" required/>
                 </div>
                 <div class="inputBox">
                   <label for="lastName">Last Name</label>
-                  <input type="text" id="lastName" required autocomplete="family-name" name="lastName">
+                  <input type="text" id="lastName" autocomplete="family-name" name="lastName" required/>
                 </div>
               </div>
 
               <div class="row50">
                 <div class="inputBox">
                   <label for="email">Email</label>
-                  <input type="text" id="email" required autocomplete="email" name="email">
+                  <input type="email" id="email" autocomplete="email" name="email" required/>
                 </div>
                 <div class="inputBox">
                   <label for="phone">Phone</label>
-                  <input type="text" id="phone" autocomplete="tel" name="phone">
+                  <input type="text" id="phone" autocomplete="tel" name="phone"/>
                 </div>
               </div>
               
               <div class="row100">
                 <div class="inputBox">
                   <label for="message">Message</label>
-                  <textarea id="message" required name="message"></textarea>
+                  <textarea id="message" name="message" required></textarea>
                 </div>
               </div>
 
               <div class="row100">
                 <div class="inputBox">
                   <button type="submit">Send</button>
-                  <input type="hidden" name="_subject" value="You got a new email from a user!">
-                  <!-- <input type="hidden" name="_next" value="https://improvisedecho.fi/thanks.html"> -->
                 </div>
               </div>
             </div>

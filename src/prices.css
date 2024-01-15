@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #66827a;
+    background-image: url('./img/house on hill/White\ dots.png');
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+main {
+    margin-top: 100px;
+}
+
+h2 {
+    color: #fff;
+}
+
+.course1,
+.course2,
+.course3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./img/house on hill/White\ dots.png');
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center;
+    padding-bottom: 50px;
+    border-bottom: 2px solid #fff;
+}
+
+.course2 {
+    background-color: rgb(211, 154, 62);
+}
+
+.course3 {
+    background-color: rgb(184, 122, 101);
+    border: none;
+}
+
+.heading {
+    margin: 50px 0;
+    color: #305047;
+    font-size: 1.2em;
+}
+
+.box {
+    width: 60%;
+    border-radius: 5px;
+    margin: 20px 0;
+    border: 2px solid #305047;
+    color: #305047;
+    background-color: rgba(255, 255, 255, 0.8);
+    line-height: 2em;
+    transition: 0.5s ease;
+}
+
+.box:hover {
+    transform: translateX(10px) translateY(-10px);
+    box-shadow: -10px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.box-title {
+    padding: 15px 35px;
+    background-color: #305047;
+    color: #fff;
+    text-align: center;
+}
+
+.box-description {
+    margin: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1.3px solid #305047;
+}
+
+.box-pricing {
+    padding: 0 15px 15px 15px;
+}
+
+.box-description span,
+.box-pricing span {
+    font-weight: bold;
+}
+
+.box-pricing span {
+    color: rgb(177, 93, 66);
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.price-columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 50px;
+}
+
+.note {
+    margin-top: 10px;
+}
+
+.note p {
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+@media only screen and (max-width: 855px) {
+    .box {
+        width: 80%;
+    }
+
+    .heading {
+        font-size: 1em;
+    }
+
+    .price-columns {
+        flex-direction: column;
+        gap: 0;
+    }
+}

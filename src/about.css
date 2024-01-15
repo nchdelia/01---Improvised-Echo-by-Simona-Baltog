@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: #66827d;
+    background-color: #66827a;
     background-image: url('./img/house on hill/White\ dots.png');
     background-size: contain;
     background-repeat: repeat;
@@ -16,26 +16,17 @@ body {
 }
 
 main {
-    margin-top: 140px;
+    margin-top: 170px;
 }
 
 .title {
     display: flex;
 }
 
-/* .horizontal-line {
-    width: 150px;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.5);
-    margin: auto;
-    margin-top: 5%;
-} */
-
 h1 {
     color: #fff;
     text-align: center;
     margin: auto;
-    margin-top: 5%;
 }
 
 .description {
@@ -69,5 +60,4 @@ h1 {
     height: 150px;
     background-color: rgba(255, 255, 255, 0.5);
     margin: auto;
-
 }

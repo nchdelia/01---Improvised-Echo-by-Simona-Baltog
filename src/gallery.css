@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #66827a;
+    background-image: url('./img/house on hill/White\ dots.png');
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+main {
+    margin-top: 140px;
+}
+
+/* general container settings */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 170px 20px 0 20px;
+}
+
+/* container heading styling */
+.container .heading {
+    width: 50%;
+    padding-bottom: 50px;
+}
+
+.container .heading h1 {
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+
+/* container images styling */
+.container .box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container .box .column {
+    display: flex;
+    flex-direction: column;
+    width: 32.5%;
+}
+
+.container .box .column img,
+.container .box .column video {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.line-container {
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+.vertical-line {
+    width: 1px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: auto;
+}
+
+@media only screen and (max-width: 769px) {
+    .container .box {
+        flex-direction: column;
+    }
+
+    .container .box .column {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 482px) {
+    .container .heading {
+        width: 100%;
+    }
+    .container .heading h1 {
+        font-size: 1.2em;
+    }
+}

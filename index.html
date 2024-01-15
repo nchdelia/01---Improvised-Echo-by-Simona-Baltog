@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="./src/navbar.css">
     <link rel="stylesheet" href="./src/footer.css">
     <link rel="stylesheet" href="./src/pageTransition.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <script src="./navbar.js" defer></script>
     <script src="./pageTransition.js" defer></script>
     <script src="./main.js" defer></script>
@@ -108,7 +113,7 @@
                 <p>
                   At the same time, drama classes offer a well-rounded educational experience that enriches the student's personal and social development while nurturing their creativity and self-expression. 
                 </p>
-                <button><a href="./musicdrama.html">View More</a></button>
+                <button id="course1Button">View More</button>
               </div>
               <div class="image-part">
                 <img src="./src/img/section 5/section5-background.png" class="section5-background hidden-element" alt="Children playing">
@@ -132,7 +137,7 @@
                 <p>
                   Whether you're pursuing singing as a hobby or a potential career, singing classes can provide a structured and supportive environment for improving your singing abilities and enjoying the many personal, social, and artistic benefits that singing has to offer.
                 </p>
-                <button><a href="./singingclasses.html">View More</a></button>
+                <button id="course2Button">View More</button>
               </div>
               <div class="image-part">
                 <img src="./src/img/section 6/section6-floor.png" class="section6-floor hidden-element">
@@ -151,7 +156,7 @@
                 <p>
                   Teaching the piano in a supportive manner can foster a positive and productive learning environment, making the experience enjoyable and effective for students.
                 </p>
-                <button><a href="./pianoclasses.html">View More</a></button>
+                <button id="course3Button">View More</button>
               </div>
               <div class="image-part">
                 <img src="./src/img/section 7/section7-background.png" class="section7-background hidden-element">
@@ -173,22 +178,154 @@
                 <p>
                   Participants will collaborate through interactive improvisational exercises, script readings, and ensemble performances.
                 </p>
-                <button><a href="./companiesclasses.html">View More</a></button>
+                <button id="course4Button">View More</button>
               </div>
               <div class="image-part">
-                <img src="./src/img/section 7/section7-background.png" class="section7-background hidden-element">
-                <img src="./src/img/section 7/section7-floor.png" class="section7-floor hidden-element">
-                <img src="./src/img/section 7/section7-plant.png" class="section7-plant hidden-element">
-                <img src="./src/img/section 7/section7-person.png" alt="Person playing piano" class="section7-person hidden-element">
-                <img src="./src/img/section 7/section7-piano.png" class="section7-piano hidden-element">
-                <img src="./src/img/section 7/section7-musicNotes.png" class="section7-musicNotes hidden-element hidden-notes">               
+                <img src="./src/img/section 8/section8-floor.png" class="hidden-element">
+                <img src="./src/img/section 8/section8-person4.png" class="hidden-element">
+                <img src="./src/img/section 8/section8-person3.png" class="hidden-element">
+                <img src="./src/img/section 8/section8-person2.png" class="hidden-element">
+                <img src="./src/img/section 8/section8-person1.png" class="hidden-element">               
               </div>
             </div>
           </section>
           <section class="section9">
             <p class="hidden-element">Improvised Echo will become your safe place where feelings will be better understood, integrated, and accepted.</p>
-            <p class="hidden-element">Here is where music, drama, vocal singing, or piano will bring tools to help you in your journey.</p>
+            <p class="hidden-element">Here is where music and drama will bring tools to help you along your journey.</p>
             <div class="vertical-line"></div>
+          </section>
+          <section class="testimonials">
+            <div class="testimonials-container">
+              <div class="section-header">
+                <p class="testimonials-title">Testimonials</p>
+              </div>
+              <div class="testimonials-content">
+                <div class="swiper testimonials-slider js-testimonials-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide testimonials-item">
+                      <div class="info">
+                        <img src="./src/img/testimonials/andreiBogdan.jpg" alt="img"/>
+                        <div class="text-box">
+                          <h3 class="name">Andrei Bogdan</h3>
+                        </div>
+                      </div>
+                      <p>
+                        Back in 2018, while Simo was working at my kids' kindergarten in Cluj-Napoca, 
+                        Romania, as a music and drama teacher, we had our first interaction with her 
+                        workshops. My kids loved working with her, she is truly a dedicated teacher, 
+                        child oriented, she has the know-how, not to mention her amazing voice. No 
+                        matter the age, the children loved her. She has this energy, a positive vibe 
+                        that is so needed in this area. I highly recommend her.
+                      </p>
+                      <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide testimonials-item">
+                      <div class="info">
+                        <img src="./src/img/testimonials/beatriceElenaIordache.jpg" alt="img"/>
+                        <div class="text-box">
+                          <h3 class="name">Beatrice Elena Iordache</h3>
+                        </div>
+                      </div>
+                      <p>
+                        I highly recommend Simona based on our singing lessons, which were more than 
+                        just developing my voice, but also about her professional abilities and care 
+                        for integrating my emotional and intelectual resources into my everyday life, 
+                        personal development and professional choices. She is not only a great vocal 
+                        coach, but most of all an empathetic mentor who understands the individual 
+                        needs of a person and works towards it's particular goals with great enthusiasm 
+                        and joy. Thank You so much, Simona!
+                      </p>
+                      <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide testimonials-item">
+                      <div class="info">
+                        <img src="./src/img/testimonials/dinuDianaLaura.jpg" alt="img"/>
+                        <div class="text-box">
+                          <h3 class="name">Dinu Diana-Laura</h3>
+                        </div>
+                      </div>
+                      <p>
+                        Simona was for a while our children's former music teacher. She has an great 
+                        talent for not only teaching music, but also connecting with children. She is 
+                        warm, encouraging and her entuziasm for music make every lesson a joy for kids. 
+                        Dear Simo, it's my pleasure I offer my thoughts and express my best wishes for 
+                        your success in the future!
+                      </p>
+                      <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide testimonials-item">
+                      <div class="info">
+                        <img src="./src/img/testimonials/ralucaPopicaCrisan.jpg" alt="img"/>
+                        <div class="text-box">
+                          <h3 class="name">Raluca Popica Crisan</h3>
+                        </div>
+                      </div>
+                      <p>
+                        I warmly recommend the workshops organized by Simona. My girls did theater 
+                        and piano with her for several years in Romania and I can say that what they 
+                        are today, the way they express themselves, how they feel, how they empathize 
+                        is largely due to Simona, who, through her mastery, talent and her dedication 
+                        managed to bring out the best and most beautiful in a child. Simona is the 
+                        one who discovers the hidden treasures in the souls of our children, so I 
+                        invite you to let your children discover what beauty, art, music, magic and 
+                        true emotions mean.
+                      </p>
+                      <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide testimonials-item">
+                      <div class="info">
+                        <img src="./src/img/testimonials/holhosLavinia.jpg" alt="img"/>
+                        <div class="text-box">
+                          <h3 class="name">Holhos Lavinia</h3>
+                        </div>
+                      </div>
+                      <p>
+                        It's a magical place that Simona creates within her workshops, a safe place 
+                        where children and also adults can explore their inner worlds, express their 
+                        emotions and ideas, create art and also  discover who they are. It's not just 
+                        a learning process, but a complex journey. I recommend her with all my heart!
+                      </p>
+                      <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination js-testimonials-pagination"></div>
+              </div>
+            </div>
           </section>
         </div>
       </main>
@@ -209,5 +346,7 @@
         </div>
       </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="swiper.js"></script>
   </body>
 </html>
