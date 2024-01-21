@@ -200,6 +200,7 @@ section {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    margin: 15px 0;
 }
 
 .section2 span {
@@ -346,6 +347,7 @@ section {
 
     h2 {
         font-size: 1.2rem;
+        text-align: center;
     }
 
     p {
@@ -353,22 +355,54 @@ section {
         line-height: 30px;
     }
     
+    .subcat {
+        height: 70px;
+    }
+
     .subcat h3 {
+        font-size: 0.95rem;
+        text-wrap: wrap;
+    }
+
+    .description {
+        padding: 15px;
+    }
+
+    .description h4 {
         font-size: 0.95rem;
     }
 
-    .description h4,
+    .keypoints {
+        padding: 15px;
+    }
+
     .keypoints h4 {
+        padding-left: 15px;
         font-size: 0.95rem;
     }
 
     .keypoints ol {
         margin-top: 10px;
         font-size: 0.9rem;
+        padding-left: 15px;
+    }
+
+    .keypoints ol li::before {
+        content: "";
+        width: 5px;
+        display: inline-block;
+    }
+
+    .section2 {
+        height: 160vh;
     }
 
     .section3 ol li h3 {
         font-size: 1rem;
+    }
+
+    .section2-container {
+        transform: translateY(0%);
     }
 
 }
