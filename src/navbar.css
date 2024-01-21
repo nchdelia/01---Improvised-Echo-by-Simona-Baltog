@@ -84,6 +84,7 @@ header ul {
     transition: 200ms;
 }
 
+/* settings for underlined title */
 @media screen and (min-width: 769px) {
     a.underlined-title:hover {
         color: #ff9774;
@@ -191,11 +192,13 @@ header ul {
     .nav-links {
         position: absolute;
         right: 0px;
-        height: 92vh;
-        top: 80px;
+        height: 100vh;
+        max-height: 100vh;
+        top: 100px;
         background-color: #66827a;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
         width: 50%;
         transform: translateX(100%);
@@ -224,7 +227,9 @@ header ul {
 
     .dropdown-active li {
         background-color: #ff9774;
-        margin-left: -40px;
+        width: 100%;
+        text-align: center;
+        /* margin-left: -30px; */
     }
 
     header.sticky {

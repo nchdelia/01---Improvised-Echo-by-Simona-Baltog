@@ -313,7 +313,7 @@ section {
 /* section 3 styling */
 .section3 {
     width: 100%;
-    background-color: #305047;
+    background: linear-gradient(0deg, rgb(38, 61, 65), #305047);
     color: #fff;
     padding-top: 50px;
     padding-bottom: 50px;

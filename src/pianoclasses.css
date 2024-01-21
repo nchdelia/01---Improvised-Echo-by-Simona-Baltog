@@ -9,28 +9,27 @@
 
 body {
     background-color: #66827a;
+    background-image: url('./img/house on hill/White\ dots.png');
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center;
 }
 
 main {
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin-top: 170px;
+    width: 100%;
     overflow: hidden;
 }
 
 .title {
-    background-image: url('./img/house on hill/White dots.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
+    margin-bottom: 50px;
 }
 
 h1 {
     color: #fff;
     text-align: center;
-    margin-top: 70px;
-    margin-bottom: 70px;
+    margin: auto;
+    
 }
 
 section {
@@ -46,13 +45,6 @@ section {
 
 .info {
     grid-area: info;
-}
-
-.section1 {
-    background-image: url('./img/house on hill/White dots.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
 }
 
 .section1 .box {
@@ -100,7 +92,6 @@ section {
 }
 
 .description {
-    width: 60%;
     margin: 50px;
     padding: 50px 20px;
     text-align: justify;
@@ -120,7 +111,6 @@ section {
 }
 
 .keypoints {
-    width: 40%;
     margin: 50px;
     padding: 50px 20px;
     background-color: rgba(255, 255, 255, 0.3);
@@ -203,28 +193,13 @@ section {
 }
 
 .section2 p {
-    width: 800px;
-    padding: 10px 0;
+    width: 90%;
+    max-width: 800px;
     line-height: 2rem;
     text-align: justify;
-}
-
-.section2 ul {
-    padding-left: 10px;
-    line-height: 2rem;
-    text-align: justify;
-    display: flex;
-}
-
-.section2 ul li {
-    list-style:none;
-    font-style: italic;
-}
-
-.section2 ul li::before {
-    content: "";
-    margin-right: 28px;
-    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .section2 span {
@@ -234,8 +209,7 @@ section {
 
 /* section 3 styling */
 .section3 {
-    width: 100%;
-    background-color: #305047;
+    background: linear-gradient(0deg, rgb(38, 61, 65), #305047);
     color: #fff;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -246,11 +220,14 @@ section {
     color: rgb(237, 173, 71);
 }
 
-.section3 p,
-.section3 ol {
-    width: 800px;
+.section3 p {
+    width: 90%;
+    max-width: 800px;
     line-height: 2rem;
     text-align: justify;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .section3 div {
@@ -267,15 +244,131 @@ section {
 
 .section3 ol li h3 {
     color: rgb(237, 173, 71);
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .section3 ::marker {
     color: rgb(237, 173, 71);
     font-weight: bold;
-    font-size: 1.1rem;
 }
 
 .quote {
     color: rgb(237, 173, 71);
     font-style: italic;
+}
+
+/* responsive design settings */
+@media screen and (min-width: 1000px) and (max-width:1200px) {
+    .description {
+        width: 70%;
+        margin: 20px;
+        padding: 20px 10px;
+    }
+    
+    .keypoints {
+        width: 30%;
+        margin: 20px;
+        padding: 20px 10px;
+    }
+    
+    .keypoints h4 {
+        padding-left: 70px;
+    }
+    
+    .keypoints ol {
+        margin-top: 20px;
+        padding-left: 50px;
+        color: #28433b;
+    }
+    
+    .keypoints ol li::before {
+        content: "";
+        width: 20px;
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .section1 .box {
+        width: 90%;
+    }
+
+    .course {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .description {
+        margin: 0;
+        padding: 30px;
+    }
+        
+    .description p {
+        margin-top: 20px;
+    }
+    
+    .keypoints {
+        width: 90%;
+        min-width: 50px;
+        margin: 0 20px 20px 20px;
+        padding: 30px;
+    }
+    
+    .keypoints h4 {
+        padding-left: 50px;
+    }
+    
+    .keypoints ol {
+        padding-left: 30px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        margin-top: 140px;
+    }
+
+    .title {
+        margin-bottom: 30px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+        line-height: 30px;
+    }
+    
+    .subcat h3 {
+        font-size: 0.95rem;
+    }
+
+    .description h4,
+    .keypoints h4 {
+        font-size: 0.95rem;
+    }
+
+    .keypoints ol {
+        margin-top: 10px;
+        font-size: 0.9rem;
+    }
+
+    .section3 ol li h3 {
+        font-size: 1rem;
+    }
+
 }
