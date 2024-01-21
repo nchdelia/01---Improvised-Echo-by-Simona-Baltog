@@ -29,7 +29,6 @@ h1 {
     color: #fff;
     text-align: center;
     margin: auto;
-    
 }
 
 section {
@@ -74,7 +73,7 @@ section {
     z-index: 10;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
-    text-align: center;   
+    text-align: center;
 }
 
 .subcat h3 {
@@ -404,5 +403,4 @@ section {
     .section2-container {
         transform: translateY(0%);
     }
-
 }
