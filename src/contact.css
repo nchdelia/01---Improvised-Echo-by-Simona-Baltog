@@ -9,25 +9,32 @@
 
 body {
   background-color: #66827a;
+  background-image: url('./img/house on hill/White\ dots.png');
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: center;
+}
+
+main {
+  margin-top: 150px;
+  width: 100%;
   overflow: hidden;
 }
 
-.contactMe {
-  margin-top: 10%;
-  position: relative;
-  width: 100%;
-  padding: 40px 100px;
-}
-
 .title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 50px;
 }
 
 h1 {
   color: #fff;
+  text-align: center;
+  margin: auto;
+}
+
+.contactMe {
+  position: relative;
+  width: 100%;
+  padding: 40px 100px;
 }
 
 .form {
@@ -163,7 +170,6 @@ h1 {
   border: 1.5px solid #ff7e6e;
   border-radius: 50%;
   margin-right: 25px;
-  
 }
 
 .info .infoBox div p {
@@ -242,5 +248,44 @@ h1 {
   .map {
     min-height: 300px;
     padding: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    margin-top: 140px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .contact h3 {
+    font-size: 1.2rem;
+  }
+
+  .contactMe {
+    padding: 20px 0;
+  }
+
+  .contact {
+    padding: 20px;
+  }
+
+  .info .infoBox div span {
+    min-width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    margin-right: 15px;
+  }
+
+  .info .infoBox div p {
+    font-size: 0.9rem;
+  }
+
+  .map {
+    padding: 0;
+    width: 100%;
   }
 }
