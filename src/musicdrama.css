@@ -54,8 +54,12 @@ section {
     grid-template-areas: 
     "categories"
     "info";
-    margin: 0 100px;
+    margin: 0 7%;
     max-width: 1500px;
+}
+
+.hidden-section1 {
+    display: none;
 }
 
 .categories {
@@ -93,6 +97,15 @@ section {
     flex-direction: row;
     background-color: rgba(255, 255, 255, 0.2);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.course-box {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .description {
@@ -275,10 +288,10 @@ section {
 
 .section2 ul {
     line-height: 2rem;
-    width: 64%;
+    width: 90%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -287,11 +300,6 @@ section {
 .section2 ul li {
     list-style: none;
     font-style: italic;
-}
-
-.section2 ul li::before {
-    content: "";
-    margin-right: 10px;
 }
 
 .section2 span {
@@ -394,15 +402,60 @@ section {
         width: 90%;
     }
 
+    .hidden-section1 {
+        display: block;
+        padding: 10px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #fff;
+        background-color: #28433b;
+        width: 90%;
+        text-align: center;
+        border: 2px solid rgba(255, 255, 255, 0.9);
+    }
+
+    .categories {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0;
+        height: 140px;
+        margin-bottom: 10px;
+    }
+
+    .subcat {
+        width: 100%;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.9);
+        border-left: 2px solid rgba(255, 255, 255, 0.9);
+        padding: 0 10px;
+        height: 70px;
+    }
+
+    .subcat h3 {
+        text-wrap: wrap;
+    }
+
+    .cat-2, 
+    .cat-4 {
+        border-right: 2px solid rgba(255, 255, 255, 0.9);
+    }
+
+    .darken-1,
+    .darken-2,
+    .darken-3,
+    .darken-4 {
+        background-color: rgba(200, 200, 200, 0.511);
+    }
+
     .section2 {
         height: 140vh;
     }
 
-    .course {
-        display: flex;
+    .course-box {
         flex-direction: column;
         align-items: center;
-        width: 100%;
     }
 
     .description {
@@ -430,6 +483,17 @@ section {
     }
 }
 
+@media only screen and (max-width: 768px) {
+    .section2 ul {
+        flex-direction: column;
+    }
+
+    .section2 ul li {
+        list-style: circle;
+        margin-left: 15px;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     main {
         margin-top: 140px;
@@ -454,13 +518,17 @@ section {
         font-size: 0.9rem;
         line-height: 30px;
     }
+
+    .hidden-section1 {
+        font-size: 0.9rem;
+    }
     
     .subcat {
         height: 70px;
     }
 
     .subcat h3 {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         text-wrap: wrap;
     }
 
@@ -494,7 +562,7 @@ section {
     }
 
     .section2 {
-        height: 160vh;
+        height: 190vh;
     }
 
     .section3 ol li h3 {
