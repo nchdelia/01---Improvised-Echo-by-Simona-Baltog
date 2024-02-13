@@ -214,7 +214,9 @@ body {
 }
 
 /* next pages - section styling - general */
-.next-pages section {
+.next-pages .section2,
+.next-pages .section3,
+.next-pages .section9 {
     color: white;
     display: grid;
     place-items: center;
@@ -366,28 +368,28 @@ section:nth-child(3) {
     opacity: 0.2;
 }
 
-.section5,
-.section6,
-.section7,
-.section8,
-.section9 {
-    background-image: url('./img/house on hill/White\ dots.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+.courses-sections {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .section5 .section-content,
 .section6 .section-content,
 .section7 .section-content,
 .section8 .section-content {
+    color: white;
     border: 1px solid rgba(255, 255, 255, 0.5);
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     padding: 25px 40px;
+    height: 500px;
     min-height: 600px;
-    height: 100vh;
     width: 80vw;
     box-shadow: 0 5px 35px rgba(0, 0, 0, 0.15);
+    margin: 30px 0;
+    
 }
 
 .vertical-line {
@@ -403,6 +405,11 @@ section:nth-child(3) {
     max-width: 1170px;
     margin: auto;
     width: 100%;
+    margin-top: 100px;
+}
+
+.testimonials-content {
+    margin-bottom: 50px;
 }
 
 .section-header {
@@ -411,12 +418,13 @@ section:nth-child(3) {
 }
 
 .section-header .testimonials-title {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     font-weight: 600;
+    color: #fff;
 }
 
 .testimonials {
-    padding: 0px 0;
+    padding: 30px;
     width: 100%;
     background-image: url('./img/house on hill/White\ dots.png');
     background-size: contain;
@@ -464,7 +472,7 @@ section:nth-child(3) {
 
 .testimonials .swiper-pagination {
     position: relative;
-    margin-top: 40px;
+    margin-bottom: 40px;
     bottom: auto;
 }
 
@@ -527,7 +535,40 @@ section:nth-child(3) {
 
 
 
-/* settings for phone screens */
+/* settings for responsive design */
+@media only screen and (max-width:1230px) {
+    .testimonials-item {
+        min-height: 400px;
+    }
+}
+
+@media only screen and (max-width:1140px) {
+    .testimonials-item {
+        min-height: 470px;
+    }
+}
+
+@media only screen and (max-width:900px) {
+    .testimonials-item {
+        min-height: 545px;
+    }
+
+    .section-header .testimonials-title {
+        font-size: 1.4rem;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .testimonials-item {
+        min-height: 370px;
+    }
+}
+
+
+
+
+
+
 @media only screen and (max-width:600px) {
     .homepagePresentation {
         display: flex;
