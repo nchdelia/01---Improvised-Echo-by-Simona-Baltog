@@ -451,7 +451,7 @@ section:nth-child(3) {
 }
 
 .testimonials-item p {
-    margin-top: 20px;
+    margin: 20px 0;
     color: #305047;
     font-size: 0.9em;
 }
@@ -473,6 +473,55 @@ section:nth-child(3) {
     width: 12px;
     background-color: #fff;
 }
+
+#ch {
+    display: none;
+}
+
+#ch:checked ~ .extra-content {
+    display: block;
+}
+
+#ch:checked ~ label {
+    display: none;
+}
+
+#ch:checked ~ p span {
+    display: none;
+}
+
+.extra-content {
+    display: none;
+}
+
+.extra-content p {
+    margin-top: -10px;
+}
+
+.testimonials-item label {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.95em;
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    background-color: #305047;
+    font-weight: 600;
+    padding: 7px 15px;
+    border-radius: 3px;
+    margin-top: -5px;
+    transition: 0.3s;
+}
+
+.testimonials-item label:hover {
+    background-color: #ff7e6e;
+    color: #305047;
+}
+
+.testimonials-item span {
+    letter-spacing: 3px;
+}
+
+
 
 
 

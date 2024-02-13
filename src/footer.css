@@ -21,8 +21,8 @@ footer .icons {
 }
 
 footer .socialmedia-icon {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     margin: 0 20px;
     border-radius: 50%;
 }
@@ -30,5 +30,51 @@ footer .socialmedia-icon {
 footer p {
     color: rgba(255, 255, 255, 0.5);
     font-size: 0.8rem;
+    padding-bottom: 5px;
+}
+
+footer .credits {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    margin-left: 50px;
+    text-align: left;
+}
+
+footer .credits-title {
+    font-weight: bold;
+    letter-spacing: 0.5px;
     padding-bottom: 10px;
+}
+
+footer .credits a {
+    margin-left: 0.6rem;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+footer .credits a:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+@media only screen and (max-width:1000px) {
+    footer {
+        height: 240px;
+    }
+
+    .footer-container {
+        margin: 0;
+        position: relative;
+        top: 40%;
+        transform: translateY(-50%);
+    }
+
+    footer .credits {
+        position: relative;
+        bottom: 0;
+        margin-left: 0;
+        text-align: center;
+        transform: translateY(50%);
+    }
+    
 }
