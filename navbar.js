@@ -4,7 +4,9 @@ window.addEventListener("scroll", function() {
     let header = document.querySelector("header");
     let logo = document.querySelector(".logo");
     let navLinks = document.querySelector(".nav-links");
+    // let burger = document.querySelector(".burger");
 
+    // if(burger.style.display ==)
     header.classList.toggle("sticky", window.scrollY > 0);
     dropdown.classList.toggle("stickyDropdown", window.scrollY > 0);
     navLinks.classList.toggle("stickyNavLinks", window.scrollY > 0);
@@ -69,7 +71,7 @@ const navSlide = () => {
             if(link.style.animation) {
                 link.style.animation = ''
             } else {
-                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.2}s`;
             }
         });
 
