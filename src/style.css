@@ -8,7 +8,7 @@
 
 main{
     overflow: hidden;
-    background: linear-gradient(20deg, #21414b, #66827d, #21414b, #21414b);
+    background: linear-gradient(15deg, #1d424b, #66827d, #1d424b, #1d424b);
 }
 
 body {
@@ -117,7 +117,7 @@ body {
     }
 }
 
-/* first page styles for slideshow */
+/* first page styling */
 .first-page {
     background-color: #ffd290;
     background-image: url("./img/fieldOfSparkles.jpg");
@@ -206,31 +206,20 @@ body {
     transition-delay: 600ms;
 }
 
-
 @media(prefers-reduced-motion) {
     .hidden-element {
         transition: none;
     }
 }
 
-/* next pages - section styling - general */
-.next-pages .section2,
-.next-pages .section3,
-.next-pages .section9 {
-    color: white;
-    display: grid;
-    place-items: center;
+/* next pages - sections 2, 3, 4, 9 */
+.section2,
+.section3,
+.section9 {
+    display: flex;
+    flex-direction: column;
     align-content: center;
-    height: 120vh;
     z-index: 10;
-}
-
-.section-content {
-    display: grid;
-    place-items: center;
-    align-content: center;
-    gap: 10rem;
-    grid-template-columns: 4fr 4fr;
 }
 
 .section2 {
@@ -238,58 +227,102 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
-    width: 100%;
-    padding-bottom: 20px;
-    margin: 0;
-    margin-top: -20vh;
-    padding: 0;
+    height: 120vh;
     min-height: 1000px;
+    width: 100%;
+    margin-top: -20vh;
 }
 
 .section2 p {
     color: #21414b;
     font-size: 1.5rem;
     font-weight: bold;
-    margin-bottom: 100px;
     z-index: 10;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 100px;
 }
 
 .section3 {
     background-image: url('./img/house on hill/White\ dots.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center;
 }
 
-.section3 p {
+.section3,
+.section9 {
+    height: 100vh;
+}
+
+.section3 p,
+.section9 p {
+    color: #fff;
     font-size: 1.5rem;
     font-weight: bold;
-    padding: 100px;
     line-height: 3rem;
-    width: 800px;
+    width: 50%;
+    max-width: 600px;
     text-align: justify;
     margin: auto;
 }
 
-.section9 p {
-    width: 800px;
-    text-align: justify;
-    margin: auto; 
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding: 60px;
-    line-height: 3rem;
+.section4 {
+    margin-bottom: 100px;
 }
 
-/* next pages - section styling - description part */
-.description-part {
+.piano-image {
+    width: 100%;
+    opacity: 0.85;
+}
+
+.section9 {
+    margin-top: 50px;
+}
+
+.section9 .line-container {
+    padding-top: 40px;
+    margin-bottom: 50px;
+}
+
+.section9 .vertical-line {
+    width: 1px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: auto;
+}
+
+/* next pages - sections 5 - 8 (Boxes for courses) */
+.courses-sections {
     display: flex;
     flex-direction: column;
-    position: relative;
+    justify-content: center;
+    align-items: center;
 }
 
-/* .description-part button {
-    transform: translateX(50%);
-} */
+.section-content {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    gap: 10rem;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 25px 40px;
+    height: 500px;
+    min-height: 600px;
+    width: 80vw;
+    max-width: 1500px;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.15);
+    margin: 30px 0;
+}
+
+.description-part {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
 
 .description-part h2 {
     font-size: 1.5rem;
@@ -306,7 +339,7 @@ body {
     font-family: 'Quicksand', sans-serif;
     width: 150px;
     height: 50px;
-    color: white;
+    color: #fff;
     background-image: url('./img/background-button.jpg');
     background-size:cover;
     background-position: center;
@@ -316,6 +349,7 @@ body {
     font-size: 1rem;
     font-weight: bold;
     transition: all 0.5s;
+    margin-top: 25px;
 }
 
 .description-part button:hover {
@@ -330,77 +364,38 @@ body {
     color: #ed6335;
 }
 
-.description-part button a {
-    text-decoration: none;
-    color: #fff;
-}
-
-/* next pages - section styling - image part */
-section:nth-child(3) {
-    height: 50vh;
-}
-.piano-image {
+.image-part {
+    position: relative;
+    right: 0;
+    top: 0;
+    transform: translateX(-10%);
+    z-index: 100;
     width: 100%;
-    opacity: 0.9;
-}
-
-.section4 {
-    background-image: url('./img/house on hill/White\ dots.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+    max-width: 800px;
+    height: auto;
 }
 
 .image-part img {
     position: absolute;
-    left: 50%;
-    transform: translateX(-10%) translateY(-50%);
-    width: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
     height: auto;
     transition: all 1s;
-    padding-left: 70px;
 }
 
-.section5-background {
-    opacity: 0.2;
-}
-
+.section5-background,
 .section7-background {
     opacity: 0.2;
 }
 
-.courses-sections {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.section5 .section-content,
-.section6 .section-content,
-.section7 .section-content,
-.section8 .section-content {
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    padding: 25px 40px;
-    height: 500px;
-    min-height: 600px;
-    width: 80vw;
-    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.15);
-    margin: 30px 0;
-    
-}
-
-.vertical-line {
-    width: 1px;
-    height: 150px;
-    background-color: rgba(255, 255, 255, 0.5);
-    position: relative;
-    bottom: 10%;
-}
-
 /* settings for testimonials section */
+.testimonials {
+    padding: 30px;
+    width: 100%;
+    height: auto;
+}
+
 .testimonials-container {
     max-width: 1170px;
     margin: auto;
@@ -421,16 +416,6 @@ section:nth-child(3) {
     font-size: 1.7rem;
     font-weight: 600;
     color: #fff;
-}
-
-.testimonials {
-    padding: 30px;
-    width: 100%;
-    background-image: url('./img/house on hill/White\ dots.png');
-    background-size: contain;
-    background-repeat: repeat;
-    background-position: center;
-    margin-top: -20%;
 }
 
 .testimonials-item {
@@ -530,11 +515,6 @@ section:nth-child(3) {
 }
 
 
-
-
-
-
-
 /* settings for responsive design */
 @media only screen and (max-width:1230px) {
     .testimonials-item {
@@ -548,86 +528,83 @@ section:nth-child(3) {
     }
 }
 
-@media only screen and (max-width:900px) {
-    .testimonials-item {
-        min-height: 545px;
+@media only screen and (max-width: 1080px) {
+    .scroll-down {
+        display: none;
     }
 
-    .section-header .testimonials-title {
-        font-size: 1.4rem;
-    }
-}
-
-@media only screen and (max-width:767px) {
-    .testimonials-item {
-        min-height: 370px;
-    }
-}
-
-
-
-
-
-
-@media only screen and (max-width:600px) {
-    .homepagePresentation {
-        display: flex;
-        flex-direction: column;
+    .section3 {
+        background-image: url('./img/house on hill/White\ dots.png');
+        background-size: cover;
+        background-repeat: repeat;
+        background-position: center;
     }
 
-    .homepageLeftSide {
-        width: 90%;
-    }
-    
-    .homepageRightSide {
-        width: 90%;
-        margin-top: -50px;
-    }
-      
-    .homepageParagraphs {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-    
-    .homepageParagraphs p {
-        padding: 5px;
-        margin: 0;
-    }
-    
-    .homepageRightSide img {
-        padding-top: 50px;
+    .piano-image {
+        height: 40vh;
+        width: auto;
     }
 
-    .section2 {
-        background-position: right;
+    .description-part {
+        grid-area: description;
     }
-    
-    .section2 p {
+
+    .image-part {
+        grid-area: image;
+    }
+
+    .section-content {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr;
+        grid-template-areas: 
+        "image"
+        "description";
+        row-gap: 10px;
+        padding: 35px;
+        min-height: 550px;
+    }
+
+    .description-part {
+        margin-top: 30px;
+    }
+
+    .description-part h2 {
         font-size: 1.2rem;
-        width: 50%;
         text-align: center;
-        transform: translateX(40%) translateY(-80%);
+        margin-bottom: 15px;
     }
 
-    .section3 p {
-        font-size: 1.2rem;
-        width: 100%;
-        padding: 60px;
-        line-height: 2.5rem;
+    .description-part p {
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+        text-align: justify;
     }
-    
-    .section9 p {
-        font-size: 1.2rem;
-        width: 100%;
-        padding: 60px;
-        line-height: 2.5rem;
+
+    .description-part button {
+        width: 120px;
+        height: 40px;
+        font-size: 0.9rem;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .image-part {
+        width: 50%;
+        max-width: 300px;
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translateX(50%) translateY(50%);
     }
 }
 
-@media only screen and (min-width: 601px) and (max-width: 900px) {
+@media only screen and (max-width:900px) {
+    /* section1 */
+    .first-page {
+        height: 140vh;
+    }
+
     .homepagePresentation {
         display: flex;
         flex-direction: column;
@@ -659,10 +636,11 @@ section:nth-child(3) {
         padding-top: 50px;
     }
 
+    /* next sections */
     .section2 {
         background-position: right;
     }
-    
+
     .section2 p {
         font-size: 1.2rem;
         transform: translateY(-40vh);
@@ -670,84 +648,87 @@ section:nth-child(3) {
         padding: 10px;
         border-radius: 10px;
     }
-
-    .section3 p {
-        font-size: 1.2rem;
-        width: 100%;
-        padding: 60px;
-        line-height: 2.5rem;
-    }
     
+    .section3 p,
     .section9 p {
         font-size: 1.2rem;
         width: 100%;
         padding: 60px;
         line-height: 2.5rem;
     }
+
+    .testimonials-item {
+        min-height: 545px;
+    }
+
+    .section-header .testimonials-title {
+        font-size: 1.4rem;
+    }
 }
 
-@media only screen and (max-width: 1080px) {
-    .scroll-down {
-        display: none;
+@media only screen and (max-width:767px) {
+    .first-page {
+        height: 120vh;
+    }
+
+    .testimonials-item {
+        min-height: 370px;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .homepageLeftSide {
+        width: 90%;
     }
     
-    .piano-image {
-        height: 40vh;
-        width: auto;
+    .homepageRightSide {
+        width: 90%;
+        margin-top: -50px;
     }
 
-    .description-part {
-        grid-area: description;
-    }
-
-    .image-part {
-        grid-area: image;
+    .section2 p {
+        width: 50%;
+        text-align: center;
+        transform: translateX(40%) translateY(100%);
+        background: none;
     }
 
     .section-content {
-        position: relative;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 2fr;
-        grid-template-areas: 
-        "image"
-        "description";
+        padding: 20px;
+        width: 90vw;
     }
 
-    .description-part h2 {
-        font-size: 1.2rem;
+    .section-content p {
+        text-align: left;
+        padding: 6px 0;
+    }
+
+    .section5 .section-content {
+        min-height: 580px;
+    }
+
+    .section6 .section-content {
+        min-height: 600px;
+    }
+}
+
+@media only screen and (max-width:440px) {
+    .section2 {
+        background-position: 90%;
+    }
+
+    .section2 p {
+        font-size: 1.1rem;
+        padding-right: 5px;
+    }
+
+    .section3 p,
+    .section9 p {
+        font-size: 1.1rem;
         text-align: center;
+        padding: 0 5%;
     }
-
-    .description-part p {
-        font-size: 0.9rem;
-        line-height: 1.5rem;
-        text-align: justify;
-    }
-
-    .description-part button {
-        width: 120px;
-        height: 40px;
-        font-size: 0.9rem;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .section5 .section-content,
-    .section6 .section-content,
-    .section7 .section-content {
-        padding: 35px;
-        min-height: 650px;
-    }
-
-    .image-part img {
-        position: absolute;
-        left: 50%;
-        top: 5%;
-        transform: translateX(-60%);
-        width: 65%;
-        height: auto;
-        transition: all 1s;
+    .section5 .section-content {
+        min-height: 640px;
     }
 }

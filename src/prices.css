@@ -47,6 +47,7 @@ h2 {
 
 .box {
     width: 60%;
+    max-width: 1000px;
     border-radius: 5px;
     margin: 20px 0;
     border: 2px solid #305047;

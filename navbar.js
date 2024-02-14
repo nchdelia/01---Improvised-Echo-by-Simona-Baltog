@@ -4,12 +4,13 @@ window.addEventListener("scroll", function() {
     let header = document.querySelector("header");
     let logo = document.querySelector(".logo");
     let navLinks = document.querySelector(".nav-links");
-    // let burger = document.querySelector(".burger");
+    const burger = document.querySelector(".burger");
 
-    // if(burger.style.display ==)
-    header.classList.toggle("sticky", window.scrollY > 0);
-    dropdown.classList.toggle("stickyDropdown", window.scrollY > 0);
-    navLinks.classList.toggle("stickyNavLinks", window.scrollY > 0);
+    if(burger.classList.contains("toggle") == false) {
+        header.classList.toggle("sticky", window.scrollY > 0);
+        dropdown.classList.toggle("stickyDropdown", window.scrollY > 0);
+        navLinks.classList.toggle("stickyNavLinks", window.scrollY > 0);
+    }
 
     if(window.scrollY > 0 && window.innerWidth > 768) {
         logo.src = "./src/img/logo/ImprovisedEcho_logo_positive_formatPNG.png";
