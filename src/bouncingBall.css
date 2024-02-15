@@ -4,7 +4,7 @@
     width: 700px;
     position: absolute;
     margin: auto;
-    left: 0;
+    left: -3rem;
     right: 0;
     top: 10rem;
     bottom: 0;
@@ -79,3 +79,26 @@
     }
   }
   
+  @media only screen and (max-width:600px) {
+    .theater-settings {
+      left: -5rem;
+  }
+  }
+
+  @media only screen and (max-width:530px) {
+    .theater-settings {
+      left: -7rem;
+  }
+  }
+
+  @media only screen and (max-width:500px) {
+    .theater-settings {
+      left: -9rem;
+  }
+  }
+
+  @media only screen and (max-width:365px) {
+    .theater-settings {
+      left: -12rem;
+  }
+  }

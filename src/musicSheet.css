@@ -5,7 +5,7 @@
     width: 700px;
     position: absolute;
     margin: auto;
-    left: 0;
+    left: -3rem;
     right: 0;
     top: 10rem;
     bottom: 0;
@@ -27,7 +27,7 @@
     animation-delay: 3.2s;
     transition-timing-function: ease-out;
     animation-fill-mode: forwards;
-  }
+}
   
   @keyframes sheet-timer {
     100%{
@@ -36,7 +36,6 @@
   }
   
   /* music notes animation */
-  
   .note-1 {
     background-image: url('./img/music-note-1.png');
     width: 120px;
@@ -151,4 +150,28 @@
       transform: translateX(-450px);
       opacity: 0;
     }
+  }
+
+  @media only screen and (max-width:600px) {
+    .animation-container {
+      left: -5rem;
+  }
+  }
+
+  @media only screen and (max-width:530px) {
+    .animation-container {
+      left: -7rem;
+  }
+  }
+
+  @media only screen and (max-width:500px) {
+    .animation-container {
+      left: -9rem;
+  }
+  }
+
+  @media only screen and (max-width:365px) {
+    .animation-container {
+      left: -12rem;
+  }
   }

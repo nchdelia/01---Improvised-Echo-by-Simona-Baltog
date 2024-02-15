@@ -1,17 +1,3 @@
-//hiding the preloader after 10 seconds
-// let content = document.getElementById("content");
-// content.style.display = "none";
-
-// function hideLoader() {
-//     let loader = document.getElementById("preloader");
-//     loader.style.display = "none";
-//     content.style.display = "block";
-// }
-
-// window.addEventListener("load", function() {
-//     this.window.setTimeout(hideLoader, 7000);
-// })
-
 //mouse image on scroll
 window.addEventListener("scroll", function() {
     let scrollIcon = document.getElementsByClassName("scroll-down")[0];
