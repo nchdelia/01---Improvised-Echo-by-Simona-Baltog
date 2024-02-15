@@ -59,11 +59,14 @@ footer .credits-title {
 footer .credits a {
     margin-left: 0.6rem;
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgb(201, 137, 34);
+    border-bottom: 1px solid rgb(201, 137, 34);
+    padding: 2px 0;
 }
 
 footer .credits a:hover {
-    color: rgba(255, 255, 255, 1);
+    color: rgb(255, 194, 95);
+    border-bottom: 1px solid rgb(255, 194, 95);
 }
 
 @media only screen and (max-width:1000px) {
