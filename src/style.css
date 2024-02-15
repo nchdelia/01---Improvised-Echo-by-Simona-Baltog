@@ -185,13 +185,17 @@ body {
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-100%);
-    transition: all 1.3s;
+    transition: all 1s;
 }
 
 .show {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
+}
+
+.hidden-element:nth-child(0) {
+    transition-delay: 50ms;
 }
 
 .hidden-element:nth-child(1) {
