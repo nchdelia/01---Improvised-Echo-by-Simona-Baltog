@@ -3,13 +3,13 @@ window.addEventListener("scroll", function() {
     let dropdown = document.querySelector(".dropdown-settings");
     let header = document.querySelector("header");
     let logo = document.querySelector(".logo");
-    let navLinks = document.querySelector(".nav-links");
+    let links = document.querySelector(".nav-links");
     const burger = document.querySelector(".burger");
 
     if(burger.classList.contains("toggle") == false) {
         header.classList.toggle("sticky", window.scrollY > 0);
         dropdown.classList.toggle("stickyDropdown", window.scrollY > 0);
-        navLinks.classList.toggle("stickyNavLinks", window.scrollY > 0);
+        links.classList.toggle("stickyNavLinks", window.scrollY > 0);
     }
 
     if(window.scrollY > 0 && window.innerWidth > 768) {
@@ -23,6 +23,7 @@ window.addEventListener("scroll", function() {
 let dropList = document.querySelector(".dropdown-settings");
 let title = document.querySelector(".courses");
 let dropdownArrow = document.querySelector("b");
+let coursesLink = document.querySelector(".link-courses");
 
 dropList.addEventListener("mouseover", function() {
     title.classList.add("pink-title");
@@ -42,10 +43,18 @@ title.addEventListener("mouseleave", function() {
 title.addEventListener("click", function() {
     if(window.innerWidth < 769) {
         dropList.classList.toggle("dropdown-active");
+        coursesLink.classList.toggle("courses-active");
 
         title.style.display = "block";
         title.style.textAlign = "center";
         title.style.color = "#ff9774";
+        dropdownArrow.innerHTML = "&#9650;";
+    }
+
+    if(dropList.classList.contains("dropdown-active") == false) {
+        title.style.color = "#fff";
+        dropdownArrow.innerHTML = "&#9660;";
+        
     }
 });
 
@@ -54,17 +63,13 @@ const navSlide = () => {
     const burger = document.querySelector(".burger");
     const nav = document.querySelector(".nav-links");
     const navLinks = document.querySelectorAll(".link");
-
+    
     
     burger.addEventListener("click", () => {
         //toggle nav
         nav.classList.toggle("nav-active");
         if(dropList.class = "dropdown-active") {
             dropList.classList.remove("dropdown-active");
-        }
-        
-        if(title.style.color = "#ff9774") {
-            title.style.color = "#fff";
         }
 
         //animate links

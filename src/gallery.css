@@ -115,6 +115,10 @@ main {
 }
 
 @media only screen and (max-width: 769px) {
+    .column {
+        max-width: 70vw;
+    }
+
     .container .box {
         flex-direction: column;
     }
@@ -129,6 +133,10 @@ main {
 }
 
 @media only screen and (max-width: 482px) {
+    .column {
+        max-width: none;
+    }
+
     .container .heading {
         width: 100%;
     }

@@ -181,6 +181,10 @@ header ul {
 }
 
 @media screen and (max-width:900px) {
+    header {
+        padding: 0 30px;
+    }
+
     .logo {
         height: 55%;
     }
@@ -204,6 +208,7 @@ header ul {
 
     .link {
         opacity: 0;
+        height: 100px;
     }
 
     .burger {
@@ -248,16 +253,27 @@ header ul {
         display: block;
         position: relative;
         width: 100%;
-        
     }
 
     header.sticky .dropdown-active li {
         color: #28433b;
     }
+
+    .courses-active {
+        height: 340px;
+    }
 }
 
 .nav-active {
     transform: translateX(0%);
+}
+
+.rest-active {
+    transform: translateY(-100%);
+}
+
+.rest-inactive {
+    transform: translateY(100%);
 }
 
 @keyframes navLinkFade {
