@@ -5,6 +5,10 @@ body {
   
 }
 
+h1 {
+  display: none;
+}
+
 #preloader {
   background-color: rgb(122, 163, 141); 
   animation-name: loading-screen-timer;
