@@ -9,5 +9,5 @@ Overall, I wanted the website to have a playful vibe, in order to represent the 
 
 Website: https://improvisedecho.fi/
 
-<kbd>![image](https://raw.githubusercontent.com/nechitadelia/School-Timetable/main/SchoolTimetable/wwwroot/src/SchoolPlannerImg.PNG)</kbd>
+<kbd>![image](https://raw.githubusercontent.com/nechitadelia/01---Improvised-Echo-by-Simona-Baltog/main/src/img/ImprovisedEchoImg.PNG)</kbd>
 
